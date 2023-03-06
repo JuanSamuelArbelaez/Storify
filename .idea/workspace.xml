@@ -4,12 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Structure Adjustment">
+    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Code development">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Cuenta/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuenta/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuenta/CuentaAhorro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuenta/CuentaAhorro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuenta/CuentaCorriente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuenta/CuentaCorriente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/AsesorVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/AsesorVentas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Cajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Cajero.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Gerente.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Persona/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaccion/ConsultaSaldo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaccion/ConsultaSaldo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaccion/Deposito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaccion/Deposito.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaccion/Retiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaccion/Retiro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaccion/Transaccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaccion/Transaccion.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +75,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678122364993</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Structure Adjustment">
+      <created>1678126217730</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678126217730</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Code development">
+      <created>1678126342816</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678126342816</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -94,6 +118,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reset" />
     <MESSAGE value="Structure Adjustment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Structure Adjustment" />
+    <MESSAGE value="Code development" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code development" />
   </component>
 </project>
