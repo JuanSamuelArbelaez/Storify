@@ -83,7 +83,7 @@ public class Persona implements Comparable<Persona> {
         return getNombre().compareTo(o.getNombre());
     }
 
-    public Comparator getComparator_Apellido(){
+    public static Comparator getComparator_Apellido(){
         return new Comparator<Persona>(){
 
             @Override
@@ -92,7 +92,7 @@ public class Persona implements Comparable<Persona> {
             }
         };
     }
-    public Comparator getComparator_Cedula(){
+    public static Comparator getComparator_Cedula(){
         return new Comparator<Persona>(){
 
             @Override
