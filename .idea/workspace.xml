@@ -4,19 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Getters/setters added.">
-      <change afterPath="$PROJECT_DIR$/src/Banco/IBanco.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Cuenta/ICuenta.java" afterDir="false" />
+    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Code polish and implementation of ICuenta's methods in Class Cuenta">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/Banco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cuenta/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuenta/Cuenta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cuenta/CuentaAhorro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuenta/CuentaAhorro.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cuenta/CuentaCorriente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuenta/CuentaCorriente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/AsesorVentas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/AsesorVentas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banco/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/Banco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banco/IBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/IBanco.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678146465921</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Code polish and implementation of ICuenta's methods in Class Cuenta">
+      <created>1678156005674</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678156005674</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +123,7 @@
     <MESSAGE value="Structure Adjustment" />
     <MESSAGE value="Code development" />
     <MESSAGE value="Getters/setters added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Getters/setters added." />
+    <MESSAGE value="Code polish and implementation of ICuenta's methods in Class Cuenta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code polish and implementation of ICuenta's methods in Class Cuenta" />
   </component>
 </project>

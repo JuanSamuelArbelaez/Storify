@@ -5,6 +5,7 @@ import Cuenta.Cuenta;
 import Transaccion.Transaccion;
 
 import java.util.HashMap;
+import java.util.Objects;
 
 public class Cliente extends Persona{
     private Empleado empleadoAsociado;
@@ -13,8 +14,8 @@ public class Cliente extends Persona{
     public Cliente(String nombre, String apellido, String cedula, String direccion, String telefono, String correo, String fechaNacimiento, Empleado empleadoAsociado, HashMap<Integer, Cuenta> listaCuentasCliente, HashMap<String, Transaccion> listaTransacciones) {
         super(nombre, apellido, cedula, direccion, telefono, correo, fechaNacimiento);
         this.empleadoAsociado = empleadoAsociado;
-        this.listaCuentasCliente = listaCuentasCliente;
-        this.listaTransacciones = listaTransacciones;
+        this.listaCuentasCliente = Objects.requireNonNullElseGet(listaCuentasCliente, () -> new HashMap<Integer, Cuenta>());
+        this.listaTransacciones = Objects.requireNonNullElseGet(listaTransacciones, () -> new HashMap<String, Transaccion>());
     }
     public Empleado getEmpleadoAsociado() {return empleadoAsociado;}
     public void setEmpleadoAsociado(Empleado empleadoAsociado) {this.empleadoAsociado = empleadoAsociado;}
