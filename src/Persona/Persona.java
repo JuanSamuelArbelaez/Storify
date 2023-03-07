@@ -1,6 +1,6 @@
 package Persona;
 
-import java.io.Serializable;
+
 import java.util.Comparator;
 
 public class Persona implements Comparable<Persona> {

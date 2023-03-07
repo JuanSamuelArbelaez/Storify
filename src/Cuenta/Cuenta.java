@@ -1,28 +1,68 @@
 package Cuenta;
 
-import Transaccion.Transaccion;
+import Persona.Cliente;
+import Transaccion.*;
 
-import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 
-public class Cuenta implements Comparable<Cuenta> {
-    private String numeroCuenta;
+public class Cuenta implements Comparable<Cuenta>, ICuenta {
+    private final Integer numeroCuenta;
     private double saldo;
-    private HashMap<Transaccion, String> listaTransacciones;
-    public Cuenta(String numeroCuenta, double saldo, HashMap<Transaccion, String> listaTransacciones) {
+    private HashMap<String, Transaccion> listaTransacciones;
+    private Cliente clienteAsociado;
+    public Cuenta(int numeroCuenta, double saldo, HashMap<String, Transaccion> listaTransacciones, Cliente clienteAsociado) {
         this.numeroCuenta = numeroCuenta;
         this.saldo = saldo;
         this.listaTransacciones = listaTransacciones;
+        this.clienteAsociado = clienteAsociado;
     }
-    public String getNumeroCuenta() {return numeroCuenta;}
-    public void setNumeroCuenta(String numeroCuenta) {this.numeroCuenta = numeroCuenta;}
+    public Integer getNumeroCuenta() {return numeroCuenta;}
     public double getSaldo() {return saldo;}
-    public void setSaldo(double saldo) {this.saldo = saldo;}
-    public HashMap<Transaccion, String> getListaTransacciones() {return listaTransacciones;}
-    public void setListaTransacciones(HashMap<Transaccion, String> listaTransacciones) {this.listaTransacciones = listaTransacciones;}
-
+    public HashMap<String, Transaccion> getListaTransacciones() {return listaTransacciones;}
+    public Cliente getClienteAsociado() {return clienteAsociado;}
+    public void crearTransaccion(Transaccion t){
+        if(t==null) throw new IllegalArgumentException("La transaccion no puede ser nula");
+        if(containsTransaccion(t)) throw new IllegalArgumentException("");
+        this.listaTransacciones.put(t.getFecha(), t);
+    }
+    public boolean containsTransaccion(Transaccion t){
+        return listaTransacciones.containsKey(t.getFecha());
+    }
     @Override
     public int compareTo(Cuenta o) {
         return getNumeroCuenta().compareTo(o.getNumeroCuenta());
+    }
+    @Override
+    public boolean retirarDinero(double valor) throws IllegalArgumentException{
+        if(this.saldo-valor<0) throw new IllegalArgumentException("Fondos insuficientes");
+
+        String[] date = getDate().split(" ");
+        try {
+            crearTransaccion(new Retiro(date[0], date[1], valor, this));
+            return true;
+        } catch (IllegalArgumentException e){
+            return false;
+        }
+    }
+    @Override
+    public boolean depositarDinero(double valor) throws IllegalArgumentException{
+        String[] date = getDate().split(" ");
+        try {
+            crearTransaccion(new Retiro(date[0], date[1], valor, this));
+            return true;
+        } catch (IllegalArgumentException e){
+            return false;
+        }
+    }
+    @Override
+    public double consultarSaldo() {
+        return this.getSaldo();
+    }
+    private static String getDate(){
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+        LocalDateTime now = LocalDateTime.now();
+        return dtf.format(now);
     }
 }

@@ -1,12 +1,12 @@
 package Cuenta;
 
+import Persona.Cliente;
 import Transaccion.Transaccion;
 
 import java.util.HashMap;
 
 public class CuentaCorriente extends Cuenta{
-
-    public CuentaCorriente(String numeroCuenta, double saldo, HashMap<Transaccion, String> listaTransacciones) {
-        super(numeroCuenta, saldo, listaTransacciones);
+    public CuentaCorriente(int numeroCuenta, double saldo, HashMap<String, Transaccion> listaTransacciones, Cliente clienteAsociado) {
+        super(numeroCuenta, saldo, listaTransacciones, clienteAsociado);
     }
 }

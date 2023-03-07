@@ -1,10 +1,10 @@
 package Transaccion;
 
-import Persona.Cliente;
+import Cuenta.*;
 
 public class Retiro extends Transaccion{
 
-    public Retiro(String fecha, String hora, double valor, Cliente clienteAsociado) {
-        super(fecha, hora, valor, clienteAsociado);
+    public Retiro(String fecha, String hora, double valor, Cuenta cuentaAsociada) {
+        super(fecha, hora, valor, cuentaAsociada);
     }
 }
