@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Code polish. Added methods to interface IBanco">
+    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Added methods implementations in Banco, from abstract methods in IBanco">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banco/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/Banco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banco/IBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/IBanco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +45,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "preferences.JavaFX",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -62,7 +59,7 @@
       <updated>1678119288564</updated>
       <workItem from="1678164405866" duration="4000" />
       <workItem from="1678198476336" duration="3018000" />
-      <workItem from="1678279584042" duration="212000" />
+      <workItem from="1678279584042" duration="1704000" />
     </task>
     <task id="LOCAL-00001" summary="Reset">
       <created>1678121595490</created>
@@ -113,7 +110,28 @@
       <option name="project" value="LOCAL" />
       <updated>1678160503157</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Code polish. Added methods implementations in Banco, from abstract methods in IBanco">
+      <created>1678279871123</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678279871123</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added methods implementations in Banco, from abstract methods in IBanco">
+      <created>1678281071009</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678281071009</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added methods implementations in Banco, from abstract methods in IBanco">
+      <created>1678281107203</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678281107203</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +167,12 @@
     <MESSAGE value="Getters/setters added." />
     <MESSAGE value="Code polish and implementation of ICuenta's methods in Class Cuenta" />
     <MESSAGE value="Code polish. Added methods to interface IBanco" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code polish. Added methods to interface IBanco" />
+    <MESSAGE value="Code polish. Added methods implementations in Banco, from abstract methods in IBanco" />
+    <MESSAGE value="Added methods implementations in Banco, from abstract methods in IBanco" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added methods implementations in Banco, from abstract methods in IBanco" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

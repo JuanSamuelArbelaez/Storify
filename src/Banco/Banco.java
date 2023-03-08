@@ -142,8 +142,7 @@ public class Banco implements IBanco{
     @Override
     public boolean realizarRetiroCuenta(double valor, int numeroCuenta) {
         try{
-            obtenerCuenta(numeroCuenta).retirarDinero(valor);
-            return true;
+            return obtenerCuenta(numeroCuenta).retirarDinero(valor);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -152,8 +151,7 @@ public class Banco implements IBanco{
     @Override
     public boolean depositarDineroCuenta(double valor, int numeroCuenta) {
         try{
-            obtenerCuenta(numeroCuenta).depositarDinero(valor);
-            return true;
+            return obtenerCuenta(numeroCuenta).depositarDinero(valor);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
