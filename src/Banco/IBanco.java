@@ -17,8 +17,9 @@ public interface IBanco {
     void actualizarCliente(String cedula, String direccion, String telefono, String correo, Empleado empleadoAsociado);
     void eliminarCliente(String cedula);
     Cliente obtenerCliente(String cedula) throws Exception;
-    void realizarTransaccion();
-    boolean realizarRetiroCuenta(double valor, double numeroCuenta);
-    boolean depositarDineroCuenta(double valor, double numeroCuenta);
-    double consultarSaldoCuenta(double numeroCuenta);
+    void realizarTransaccion(String type, double valor, int numeroCuenta) throws IllegalArgumentException;
+    boolean realizarRetiroCuenta(double valor, int numeroCuenta);
+    boolean depositarDineroCuenta(double valor, int numeroCuenta);
+    double consultarSaldoCuenta(int numeroCuenta);
+    Cuenta obtenerCuenta(int numeroCuenta) throws Exception;
 }

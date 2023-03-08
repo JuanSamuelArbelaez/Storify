@@ -123,22 +123,54 @@ public class Banco implements IBanco{
     }
 
     @Override
-    public void realizarTransaccion() {
-
+    public void realizarTransaccion(String type, double valor, int numeroCuenta) throws IllegalArgumentException{
+        switch(type){
+            case "retiro":
+                realizarRetiroCuenta(valor, numeroCuenta);
+                break;
+            case "deposito":
+                depositarDineroCuenta(valor, numeroCuenta);
+                break;
+            case "consulta":
+                consultarSaldoCuenta(numeroCuenta);
+                break;
+            default:
+                throw new IllegalArgumentException("Operacion no valida");
+        }
     }
 
     @Override
-    public boolean realizarRetiroCuenta(double valor, double numeroCuenta) {
-        return false;
+    public boolean realizarRetiroCuenta(double valor, int numeroCuenta) {
+        try{
+            obtenerCuenta(numeroCuenta).retirarDinero(valor);
+            return true;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
-    public boolean depositarDineroCuenta(double valor, double numeroCuenta) {
-        return false;
+    public boolean depositarDineroCuenta(double valor, int numeroCuenta) {
+        try{
+            obtenerCuenta(numeroCuenta).depositarDinero(valor);
+            return true;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
-    public double consultarSaldoCuenta(double numeroCuenta) {
-        return 0;
+    public double consultarSaldoCuenta(int numeroCuenta) {
+        try{
+            return obtenerCuenta(numeroCuenta).getSaldo();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public Cuenta obtenerCuenta(int numeroCuenta) throws Exception{
+        if(!listaCuentas.containsKey(numeroCuenta))throw new Exception("Cuenta no encontrada");
+        return listaCuenta.get(numeroCuenta);
     }
 }
