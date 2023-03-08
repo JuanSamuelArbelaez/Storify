@@ -171,6 +171,6 @@ public class Banco implements IBanco{
     @Override
     public Cuenta obtenerCuenta(int numeroCuenta) throws Exception{
         if(!listaCuentas.containsKey(numeroCuenta))throw new Exception("Cuenta no encontrada");
-        return listaCuenta.get(numeroCuenta);
+        return listaCuentas.get(numeroCuenta);
     }
 }
