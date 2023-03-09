@@ -4,20 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Added methods implementations in Banco, from abstract methods in IBanco">
-      <change afterPath="$PROJECT_DIR$/src/Controllers/ControllerCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/ControllerConsultaSaldo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/ControllerCuenta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/ControllerDeposito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/ControllerEmpleado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/ControllerRetiro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/fxml/Login_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/JavaFX.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Controllers added">
+      <change afterPath="$PROJECT_DIR$/src/Controllers/HomeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Taller_Colecciones.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Taller_Colecciones.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banco/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/Banco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/ControllerEmpleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/EmployeeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Cajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Cajero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Gerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/Login_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/Login_View.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +25,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
-        <option value="FxmlFile" />
         <option value="module-info" />
+        <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,7 +56,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -92,7 +89,7 @@
       <workItem from="1678164405866" duration="4000" />
       <workItem from="1678198476336" duration="3018000" />
       <workItem from="1678279584042" duration="4708000" />
-      <workItem from="1678285136795" duration="11230000" />
+      <workItem from="1678285136795" duration="19969000" />
     </task>
     <task id="LOCAL-00001" summary="Reset">
       <created>1678121595490</created>
@@ -171,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678281392784</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Controllers added">
+      <created>1678330444810</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678330444811</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +213,8 @@
     <MESSAGE value="Code polish. Added methods to interface IBanco" />
     <MESSAGE value="Code polish. Added methods implementations in Banco, from abstract methods in IBanco" />
     <MESSAGE value="Added methods implementations in Banco, from abstract methods in IBanco" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added methods implementations in Banco, from abstract methods in IBanco" />
+    <MESSAGE value="Controllers added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Controllers added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

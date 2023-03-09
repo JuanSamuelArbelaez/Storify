@@ -11,6 +11,8 @@ import java.util.HashSet;
 import java.util.TreeSet;
 
 public class Banco implements IBanco{
+    public Banco() {
+    }
     private static HashSet<Cliente> listaClientes = new HashSet<>();
     private static TreeSet<Empleado> listaEmpleados = new TreeSet<>();
     private static HashMap<Integer,Cuenta> listaCuentas = new HashMap<>();

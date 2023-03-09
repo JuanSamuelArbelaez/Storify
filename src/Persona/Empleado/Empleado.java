@@ -5,9 +5,12 @@ import Persona.Cliente;
 import java.util.HashSet;
 
 public class Empleado extends Persona.Persona{
+    private boolean manager = false;
     private String codigo;
     private Double salario;
     private HashSet<Cliente> clientes;
+    public boolean isManager() {return manager;}
+    protected void setManager(boolean manager) {this.manager=manager;}
     public String getCodigo() {return codigo;}
     public void setCodigo(String codigo) {this.codigo = codigo;}
     public Double getSalario() {return salario;}
