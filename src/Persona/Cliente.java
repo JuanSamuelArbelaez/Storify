@@ -3,7 +3,7 @@ package Persona;
 import Persona.Empleado.Empleado;
 import Cuenta.Cuenta;
 import Transaccion.Transaccion;
-
+import Persona.Persona;
 import java.util.HashMap;
 import java.util.Objects;
 
