@@ -4,17 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Controllers added">
-      <change afterPath="$PROJECT_DIR$/src/Controllers/HomeController.java" afterDir="false" />
+    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Resources for FXML">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banco/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/Banco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/ControllerEmpleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taller_Colecciones.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Taller_Colecciones.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Cajero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Cajero.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Gerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Login_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/Login_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fxml/Client_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/fxml/Client_View.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,19 +47,22 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-19 (2)",
-    "last_opened_file_path": "C:/Users/Samuel/Documents/FX/javafx-sdk-19.0.2.1",
+    "last_opened_file_path": "C:/Users/Samuel/Documents/FX/javafx-sdk-19.0.2.1/lib",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
+    "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "vcs.Git",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones\src\fxml" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones\src\main\java" />
     </key>
@@ -89,7 +88,8 @@
       <workItem from="1678164405866" duration="4000" />
       <workItem from="1678198476336" duration="3018000" />
       <workItem from="1678279584042" duration="4708000" />
-      <workItem from="1678285136795" duration="19969000" />
+      <workItem from="1678285136795" duration="21106000" />
+      <workItem from="1678393529415" duration="7729000" />
     </task>
     <task id="LOCAL-00001" summary="Reset">
       <created>1678121595490</created>
@@ -175,7 +175,28 @@
       <option name="project" value="LOCAL" />
       <updated>1678330444811</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Controllers and FXML format. Login View polished.">
+      <created>1678349438698</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1678349438698</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Controllers and FXML format. Login View polished.">
+      <created>1678349449838</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1678349449838</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Resources for FXML">
+      <created>1678349487692</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1678349487692</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,7 +235,9 @@
     <MESSAGE value="Code polish. Added methods implementations in Banco, from abstract methods in IBanco" />
     <MESSAGE value="Added methods implementations in Banco, from abstract methods in IBanco" />
     <MESSAGE value="Controllers added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Controllers added" />
+    <MESSAGE value="Controllers and FXML format. Login View polished." />
+    <MESSAGE value="Resources for FXML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resources for FXML" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
