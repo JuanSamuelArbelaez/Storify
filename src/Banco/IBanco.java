@@ -1,11 +1,9 @@
 package Banco;
 
-import Cuenta.Cuenta;
+import Cuentas.Cuenta;
 import Persona.Cliente;
 import Persona.Empleado.Empleado;
-import Transaccion.Transaccion;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 public interface IBanco {
@@ -17,9 +15,11 @@ public interface IBanco {
     void actualizarCliente(String cedula, String direccion, String telefono, String correo, Empleado empleadoAsociado);
     void eliminarCliente(String cedula);
     Cliente obtenerCliente(String cedula) throws Exception;
-    void realizarTransaccion(String type, double valor, int numeroCuenta) throws IllegalArgumentException;
-    boolean realizarRetiroCuenta(double valor, int numeroCuenta);
-    boolean depositarDineroCuenta(double valor, int numeroCuenta);
-    double consultarSaldoCuenta(int numeroCuenta);
-    Cuenta obtenerCuenta(int numeroCuenta) throws Exception;
+    void realizarTransaccion(String type, double valor, String numeroCuenta) throws Exception;
+    boolean realizarRetiroCuenta(double valor, String numeroCuenta) throws Exception;
+    boolean depositarDineroCuenta(double valor, String numeroCuenta) throws Exception;
+    double consultarSaldoCuenta(String numeroCuenta);
+    Cuenta getCuenta(String numeroCuenta) throws Exception;
+    Cliente getCliente(String cedula) throws Exception;
+    Empleado getEmpleado(String cedula) throws Exception;
 }

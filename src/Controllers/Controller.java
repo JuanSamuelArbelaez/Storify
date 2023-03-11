@@ -1,10 +1,5 @@
 package Controllers;
-import Persona.*;
-import Persona.Empleado.*;
 import Banco.*;
-import Cuenta.*;
-import Transaccion.*;
-import javafx.event.*;
 import javafx.fxml.*;
 import javafx.scene.*;
 import javafx.stage.Stage;
@@ -17,7 +12,10 @@ public class Controller {
     public Parent root;
     public FXMLLoader loader;
 
-    public void setBanco(Banco banco) {
-        this.banco = banco;
+    public void setBanco() {
+        try {
+            this.banco = FileManager.readFile();
+        } catch (Exception e) {
+        }
     }
 }

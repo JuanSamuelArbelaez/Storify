@@ -1,10 +1,10 @@
 package Transaccion;
 
-import Cuenta.*;
+import Cuentas.*;
 
 public class Retiro extends Transaccion{
 
-    public Retiro(String fecha, String hora, double valor, Cuenta cuentaAsociada) {
-        super(fecha, hora, valor, cuentaAsociada);
+    public Retiro(String fecha, double valor, Cuenta cuentaAsociada) {
+        super(fecha, valor, cuentaAsociada);
     }
 }

@@ -1,10 +1,10 @@
 package Transaccion;
 
 
-import Cuenta.Cuenta;
+import Cuentas.Cuenta;
 
 public class ConsultaSaldo extends Transaccion{
-    public ConsultaSaldo(String fecha, String hora, double valor, Cuenta cuentaAsociada) {
-        super(fecha, hora, valor, cuentaAsociada);
+    public ConsultaSaldo(String fecha, double valor, Cuenta cuentaAsociada) {
+        super(fecha, valor, cuentaAsociada);
     }
 }
