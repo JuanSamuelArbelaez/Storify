@@ -1,6 +1,6 @@
 package Banco;
 
-import Cuenta.Cuenta;
+import Cuentas.Cuenta;
 import Persona.*;
 import Persona.Empleado.*;
 import Transaccion.Transaccion;
@@ -14,7 +14,7 @@ import java.util.TreeSet;
 public class Banco implements IBanco, Serializable {
     private HashSet<Cliente> listaClientes = new HashSet<>();
     private TreeSet<Empleado> listaEmpleados = new TreeSet<>();
-    private HashMap<Integer,Cuenta> listaCuentas = new HashMap<>();
+    private HashMap<String,Cuenta> listaCuentas = new HashMap<>();
     private HashMap<String, Transaccion> listaTransaccionesAsociadas = new HashMap<>();
     public HashSet<Cliente> getListaClientes() {
         return listaClientes;
@@ -24,7 +24,7 @@ public class Banco implements IBanco, Serializable {
         return listaEmpleados;
     }
 
-    public HashMap<Integer, Cuenta> getListaCuentas() {
+    public HashMap<String, Cuenta> getListaCuentas() {
         return listaCuentas;
     }
 

@@ -1,11 +1,9 @@
 package Banco;
 
-import Cuenta.Cuenta;
+import Cuentas.Cuenta;
 import Persona.Cliente;
 import Persona.Empleado.Empleado;
-import Transaccion.Transaccion;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
 public interface IBanco {

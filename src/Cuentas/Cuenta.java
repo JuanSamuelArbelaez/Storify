@@ -1,24 +1,28 @@
-package Cuenta;
+package Cuentas;
 
 import Persona.Cliente;
 import Transaccion.*;
+import javafx.beans.property.SimpleStringProperty;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
+import java.util.Objects;
 
-public class Cuenta implements Comparable<Cuenta>, ICuenta {
-    private final Integer numeroCuenta;
+public class Cuenta implements Comparable<Cuenta>, ICuenta, Serializable {
+    private final String numeroCuenta;
     private double saldo;
+    private String tipo= this.getClass().getSimpleName();
     private HashMap<String, Transaccion> listaTransacciones;
     private Cliente clienteAsociado;
-    public Cuenta(int numeroCuenta, double saldo, HashMap<String, Transaccion> listaTransacciones, Cliente clienteAsociado) {
+    public Cuenta(String numeroCuenta, double saldo, HashMap<String, Transaccion> listaTransacciones, Cliente clienteAsociado) {
         this.numeroCuenta = numeroCuenta;
         this.saldo = saldo;
-        this.listaTransacciones = listaTransacciones;
+        this.listaTransacciones = Objects.requireNonNullElseGet(listaTransacciones, () -> new HashMap<String, Transaccion>());
         this.clienteAsociado = clienteAsociado;
     }
-    public Integer getNumeroCuenta() {return numeroCuenta;}
+    public String getNumeroCuenta() {return numeroCuenta;}
     public double getSaldo() {return saldo;}
     public HashMap<String, Transaccion> getListaTransacciones() {return listaTransacciones;}
     public Cliente getClienteAsociado() {return clienteAsociado;}
@@ -35,22 +39,20 @@ public class Cuenta implements Comparable<Cuenta>, ICuenta {
         return getNumeroCuenta().compareTo(o.getNumeroCuenta());
     }
     @Override
-    public boolean retirarDinero(double valor) throws IllegalArgumentException{
-        if(this.saldo-valor<0) throw new IllegalArgumentException("Fondos insuficientes");
-
-        String[] date = getDate().split(" ");
+    public boolean retirarDinero(double valor){
         try {
-            crearTransaccion(new Retiro(date[0], date[1], valor, this));
+            if(this.saldo-valor<0) throw new IllegalArgumentException("Fondos insuficientes");
+            crearTransaccion(new Retiro(getDate(), valor, this));
             return true;
         } catch (IllegalArgumentException e){
             return false;
         }
     }
     @Override
-    public boolean depositarDinero(double valor) throws IllegalArgumentException{
+    public boolean depositarDinero(double valor){
         String[] date = getDate().split(" ");
         try {
-            crearTransaccion(new Retiro(date[0], date[1], valor, this));
+            crearTransaccion(new Deposito(getDate(), valor, this));
             return true;
         } catch (IllegalArgumentException e){
             return false;
@@ -58,6 +60,11 @@ public class Cuenta implements Comparable<Cuenta>, ICuenta {
     }
     @Override
     public double consultarSaldo() {
+        try{
+            crearTransaccion(new ConsultaSaldo(getDate(), 0, this));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         return this.getSaldo();
     }
     private static String getDate(){
@@ -65,4 +72,6 @@ public class Cuenta implements Comparable<Cuenta>, ICuenta {
         LocalDateTime now = LocalDateTime.now();
         return dtf.format(now);
     }
-}
+    public String getTipo() {
+        return tipo;
+    }}

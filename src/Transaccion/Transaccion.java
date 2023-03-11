@@ -1,7 +1,6 @@
 package Transaccion;
 
-import Persona.Cliente;
-import Cuenta.*;
+import Cuentas.*;
 
 import java.io.Serializable;
 
@@ -11,9 +10,8 @@ public class Transaccion implements Comparable<Transaccion>, Serializable {
     private String hora;
     private double valor;
     private Cuenta cuentaAsociada;
-    public Transaccion(String fecha, String hora, double valor, Cuenta cuentaAsociada) {
+    public Transaccion(String fecha, double valor, Cuenta cuentaAsociada) {
         this.fecha = fecha;
-        this.hora = hora;
         this.valor = valor;
         this.cuentaAsociada = cuentaAsociada;
     }

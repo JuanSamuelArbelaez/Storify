@@ -1,4 +1,4 @@
 package Controllers;
 
-public class Manager_Controller {
+public class Manager_Controller extends Controller{
 }

@@ -5,34 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Resources for FXML">
-      <change afterPath="$PROJECT_DIR$/src/Controllers/Client_Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/Client_View.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controllers/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Banco/FileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controllers/Account_Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controllers/Account_View.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cuentas/CuentaCorriente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Cuentas/Cuenta_SimpleProperty.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Taller_Colecciones.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Taller_Colecciones.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Banco/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/Banco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Cliente_Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Consulta_Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Deposito_Controller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Employee_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Employee_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banco/IBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/IBanco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Client_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Client_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Client_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Client_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Cuenta_Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Cuenta_View.fxml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Retiro_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Transactions_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Home_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Home_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Manager_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Manager_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Transactions_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Transactions_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuenta/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/Cuenta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuenta/CuentaAhorro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuenta/CuentaCorriente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/CuentaAhorro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuenta/ICuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/ICuenta.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Persona/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Persona/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/20943807.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/20943807.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/Home_Art.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Home_Art.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/Logo_Cliente.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Logo_Cliente.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Resources/Logo_Empleado.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/Logo_Empleado.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaccion/ConsultaSaldo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaccion/ConsultaSaldo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaccion/Deposito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaccion/Deposito.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaccion/Retiro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaccion/Retiro.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Transaccion/Transaccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaccion/Transaccion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transaccion/fxml/Login_View.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Client_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Home_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Consulta_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Employee_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Deposito_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Transactions_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Employee_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Cuenta_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Login_View.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Manager_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Manager_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fxml/Retiro_View.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +83,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="Banco" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones\src\fxml" />
     </key>
@@ -91,6 +95,9 @@
       <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones\src\Resources\images" />
       <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones\src\Resources" />
       <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones\src\main\java" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
   <component name="RunManager">
@@ -115,7 +122,7 @@
       <workItem from="1678198476336" duration="3018000" />
       <workItem from="1678279584042" duration="4708000" />
       <workItem from="1678285136795" duration="21106000" />
-      <workItem from="1678393529415" duration="42703000" />
+      <workItem from="1678393529415" duration="74467000" />
     </task>
     <task id="LOCAL-00001" summary="Reset">
       <created>1678121595490</created>
@@ -229,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678413178036</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Resources for FXML">
+      <created>1678510871470</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678510871470</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -1,9 +1,9 @@
 package Transaccion;
 
-import Cuenta.Cuenta;
+import Cuentas.Cuenta;
 
 public class Deposito extends Transaccion{
-    public Deposito(String fecha, String hora, double valor, Cuenta cuentaAsociada) {
-        super(fecha, hora, valor, cuentaAsociada);
+    public Deposito(String fecha, double valor, Cuenta cuentaAsociada) {
+        super(fecha, valor, cuentaAsociada);
     }
 }
