@@ -3,8 +3,10 @@ package Transaccion;
 import Persona.Cliente;
 import Cuenta.*;
 
+import java.io.Serializable;
 
-public class Transaccion implements Comparable<Transaccion> {
+
+public class Transaccion implements Comparable<Transaccion>, Serializable {
     private String fecha;
     private String hora;
     private double valor;
