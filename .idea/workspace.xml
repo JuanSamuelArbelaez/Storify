@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="All Client branch finished">
-      <change afterPath="$PROJECT_DIR$/src/Persona/Cliente_SimpleProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Persona/Empleado/Empleado_SimpleProperty.java" afterDir="false" />
+    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Manager window view finished">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Account_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Account_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Banco.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Banco.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Client_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Client_View.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/Manager_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Manager_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/Manager_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Manager_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Transactions_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Transactions_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/Cuenta_SimpleProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/Cuenta_SimpleProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Empleado_SimpleProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Empleado_SimpleProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Gerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Persona.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +105,7 @@
       <workItem from="1678198476336" duration="3018000" />
       <workItem from="1678279584042" duration="4708000" />
       <workItem from="1678285136795" duration="21106000" />
-      <workItem from="1678393529415" duration="99477000" />
+      <workItem from="1678393529415" duration="105594000" />
     </task>
     <task id="LOCAL-00001" summary="Reset">
       <created>1678121595490</created>
@@ -242,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678595253058</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Manager window view finished">
+      <created>1678605205281</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1678605205281</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +297,8 @@
     <MESSAGE value="Resources for FXML" />
     <MESSAGE value="Client Window Fully Finished. Info update support aded. Account View Window structure finished." />
     <MESSAGE value="All Client branch finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="All Client branch finished" />
+    <MESSAGE value="Manager window view finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manager window view finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -300,9 +313,9 @@
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controllers/Home_Controller.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="89" />
+          <url>file://$PROJECT_DIR$/src/Controllers/Manager_Controller.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="91" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

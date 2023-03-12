@@ -12,6 +12,7 @@ public class Persona implements Comparable<Persona>, Serializable {
     private String telefono;
     private String correo;
     private String fechaNacimiento;
+    private String nombreCompleto;
     public Persona(String nombre, String apellido, String cedula, String direccion, String telefono, String correo, String fechaNacimiento) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -21,6 +22,7 @@ public class Persona implements Comparable<Persona>, Serializable {
         this.correo = correo;
         this.fechaNacimiento = fechaNacimiento;
         this.password="0000";
+        this.nombreCompleto=this.nombre+" "+this.apellido;
     }
 
     public String getPassword() {return password;}
@@ -45,6 +47,15 @@ public class Persona implements Comparable<Persona>, Serializable {
     public void setCorreo(String correo) {this.correo=correo;}
     public String getFechaNacimiento() {return fechaNacimiento;}
     public void setFechaNacimiento(String fechaNacimiento) {this.fechaNacimiento=fechaNacimiento;}
+
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
     @Override
     public int compareTo(Persona o) {
         return getNombre().compareTo(o.getNombre());

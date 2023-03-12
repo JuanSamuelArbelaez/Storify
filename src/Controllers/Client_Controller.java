@@ -134,7 +134,7 @@ public class Client_Controller extends Controller{
 
         this.accounts.getItems().clear();
         this.cliente.getListaCuentasCliente().forEach((k, v) -> {
-            this.accounts.getItems().add(new Cuenta_SimpleProperty(k,v.getSaldo(), v.getTipo()));
+            this.accounts.getItems().add(new Cuenta_SimpleProperty(v));
         });
     }
 }

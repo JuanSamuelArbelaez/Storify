@@ -19,7 +19,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Manager_Controller">
    <children>
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;">
@@ -269,7 +268,7 @@
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="680.0">
                                                    <children>
-                                                      <TableView fx:id="employees1" layoutX="20.0" layoutY="20.0" prefHeight="459.0" prefWidth="641.0">
+                                                      <TableView fx:id="clients" layoutX="20.0" layoutY="20.0" prefHeight="459.0" prefWidth="641.0">
                                                          <columns>
                                                             <TableColumn fx:id="clientID" editable="false" prefWidth="75.0" text="PID" />
                                                             <TableColumn fx:id="clientName" editable="false" prefWidth="387.9999694824219" text="Name" />
@@ -458,7 +457,7 @@
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="680.0">
                                                    <children>
-                                                      <TableView fx:id="employees11" layoutX="20.0" layoutY="20.0" prefHeight="459.0" prefWidth="641.0">
+                                                      <TableView fx:id="accounts" layoutX="20.0" layoutY="20.0" prefHeight="459.0" prefWidth="641.0">
                                                          <columns>
                                                             <TableColumn fx:id="acc_PID" editable="false" prefWidth="75.0" text="PID" />
                                                             <TableColumn fx:id="acc_Name" editable="false" prefWidth="387.9999694824219" text="Name" />

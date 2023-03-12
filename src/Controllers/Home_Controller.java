@@ -3,6 +3,7 @@ package Controllers;
 import Banco.*;
 import Persona.Cliente;
 import Persona.Empleado.Empleado;
+import Persona.Empleado.Gerente;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,7 +49,14 @@ public class Home_Controller extends Controller {
         try {
             Empleado empleado = banco.obtenerEmpleado(emp_Code_Field.getText(), emp_ID_Field.getText());
             if(!empleado.getPassword().equals(emp_Password_Field.getText()))throw new Exception("");
-            if(empleado.isManager()) root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Manager_View.fxml")));
+            if(empleado.isManager()){
+                loader = new FXMLLoader(getClass().getResource("Manager_View.fxml"));
+                root = loader.load();
+
+                Manager_Controller managerController = loader.getController();
+                managerController.setBanco();
+                managerController.setManager(empleado);
+            }
             else root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Employee_View.fxml")));
             FileManager.writeFile(banco);
 

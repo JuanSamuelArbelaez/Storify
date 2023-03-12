@@ -31,13 +31,12 @@ public class Transactions_Controller extends Controller {
     @FXML
     private ComboBox optionBox;
     @FXML
-    private String address;
+    private String withdraw;
     @FXML
-    private String phone;
-    @FXML
-    private String email;
+    private String deposit;
 
-    @FXML private void goBack(ActionEvent actionEvent) {
+    @Deprecated
+    private void goBack(ActionEvent actionEvent) {
         try{
             loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("Account_View.fxml"));
@@ -56,7 +55,8 @@ public class Transactions_Controller extends Controller {
             throw new RuntimeException(e);
         }
     }
-    @FXML private void createTransaction(ActionEvent event) {
+    @Deprecated
+    private void createTransaction(ActionEvent event) {
         try {
             String item = this.optionBox.getSelectionModel().getSelectedItem().toString();
             String amount = this.amountField.getText();

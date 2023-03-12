@@ -1,11 +1,84 @@
 package Controllers;
 
+import Banco.FileManager;
+import Persona.*;
+import Persona.Empleado.*;
+import Cuentas.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.*;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.*;
+import javafx.stage.Stage;
 
 public class Manager_Controller extends Controller{
+    private Empleado employee;
+    private Empleado manager;
+    private Cliente client;
+    private Cuenta account;
+
+    @FXML
+    void goBack(ActionEvent event){
+        try{
+            loader = new FXMLLoader(getClass().getResource("Home_View.fxml"));
+            root = loader.load();
+            FileManager.writeFile(banco);
+
+            Home_Controller homeController = loader.getController();
+            homeController.setBanco();
+
+            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Home");
+            stage.show();
+        }catch (Exception e){}
+    }
+    @FXML
+    void addEmployee(ActionEvent event){
+
+    }
+    @FXML
+    void saveEmployee(ActionEvent event){
+
+    }
+    @FXML
+    void removeEmployee(ActionEvent event){
+
+    }
+    @FXML
+    void srchEmployee(ActionEvent event){
+
+    }
+    @FXML
+    void addClient(ActionEvent event){
+
+    }
+    @FXML
+    void saveClient(ActionEvent event){
+
+    }
+    @FXML
+    void removeClient(ActionEvent event){
+
+    }
+    @FXML
+    void srchClient(ActionEvent event){
+
+    }
+    @FXML
+    void addAccount(ActionEvent event){
+
+    }
+    @FXML
+    void srchAccount(ActionEvent event){
+
+    }
+    @FXML
+    void removeAccount(ActionEvent event){
+
+    }
     @FXML
     private TableView employees;
     @FXML
@@ -55,7 +128,7 @@ public class Manager_Controller extends Controller{
     @FXML
     private TextField editEmp_Email;
     @FXML
-    private TableView employees1;
+    private TableView clients;
     @FXML
     private TableColumn clientID;
     @FXML
@@ -97,7 +170,7 @@ public class Manager_Controller extends Controller{
     @FXML
     private TextField editCl_Email;
     @FXML
-    private TableView employees11;
+    private TableView accounts;
     @FXML
     private TableColumn acc_PID;
     @FXML
@@ -142,41 +215,78 @@ public class Manager_Controller extends Controller{
     private Text empPhone;
     @FXML
     private Text empMail;
-
-    @FXML void goBack(ActionEvent event){
-
+    @FXML
+    private Text empBDay;
+    @FXML
+    private Text empCode;
+    public void setManager(Empleado manager) {
+        this.manager = manager;
+        setManagerInfo();
     }
-    @FXML void addEmployee(ActionEvent event){
 
+    private void setManagerInfo() {
+        this.empName.setText(manager.getNombre()+" "+manager.getApellido());
+        this.empID.setText(manager.getCedula());
+        this.empMail.setText(manager.getCorreo());
+        this.empAdd.setText(manager.getDireccion());
+        this.empCode.setText(manager.getCodigo());
+        this.empBDay.setText(manager.getFechaNacimiento());
+        this.empPhone.setText(manager.getTelefono());
+        setEmployeeDisplay();
+        setClientDisplay();
+        setAccountDisplay();
     }
-    @FXML void saveEmployee(ActionEvent event){
+    private void setEmployeeDisplay() {
+        this.employeeCode.setCellValueFactory(new PropertyValueFactory<String, Empleado>("codigo"));
 
+        this.employeeName.setCellValueFactory(new PropertyValueFactory<String, Empleado>("nombreCompleto"));
+
+        this.employeeAdd.setCellValueFactory(new PropertyValueFactory<String, Empleado>("direccion"));
+
+        this.employeePID.setCellValueFactory(new PropertyValueFactory<String, Empleado>("cedula"));
+
+        this.employeeBDay.setCellValueFactory(new PropertyValueFactory<String, Empleado>("fechaNacimiento"));
+
+        this.employeeEmail.setCellValueFactory(new PropertyValueFactory<String, Empleado>("correo"));
+
+        this.employeePhone.setCellValueFactory(new PropertyValueFactory<String, Empleado>("telefono"));
+        employees.getItems().clear();
+        for(Empleado empleado:this.banco.getListaEmpleados()){
+            this.employees.getItems().add(empleado);
+        }
     }
-    @FXML void removeEmployee(ActionEvent event){
+    private void setClientDisplay() {
+        this.clientID.setCellValueFactory(new PropertyValueFactory<String, Cliente>("cedula"));
 
+        this.clientName.setCellValueFactory(new PropertyValueFactory<String, Cliente>("nombreCompleto"));
+
+        this.clientAdd.setCellValueFactory(new PropertyValueFactory<String, Cliente>("direccion"));
+
+        this.clientEmail.setCellValueFactory(new PropertyValueFactory<String, Cliente>("correo"));
+
+        this.clientBDay.setCellValueFactory(new PropertyValueFactory<String, Cliente>("fechaNacimiento"));
+
+        this.clientPhone.setCellValueFactory(new PropertyValueFactory<String, Cliente>("telefono"));
+        clients.getItems().clear();
+        for(Cliente cliente:this.banco.getListaClientes()){
+            this.clients.getItems().add(cliente);
+        }
     }
-    @FXML void srchEmployee(ActionEvent event){
+    private void setAccountDisplay() {
+        this.acc_Balance.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("saldo"));
 
-    }
-    @FXML void addClient(ActionEvent event){
+        this.acc_Name.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("nombre"));
 
-    }
-    @FXML void saveClient(ActionEvent event){
+        this.acc_Number.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("numeroCuenta"));
 
-    }
-    @FXML void removeClient(ActionEvent event){
+        this.acc_PID.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("id"));
 
-    }
-    @FXML void srchClient(ActionEvent event){
+        this.acc_Type.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("tipo"));
 
-    }
-    @FXML void addAccount(ActionEvent event){
+        this.accounts.getItems().clear();
 
-    }
-    @FXML void srchAccount(ActionEvent event){
-
-    }
-    @FXML void removeAccount(ActionEvent event){
-
+        this.banco.getListaCuentas().forEach((k, v) -> {
+            this.accounts.getItems().add(new Cuenta_SimpleProperty(v));
+        });
     }
 }
