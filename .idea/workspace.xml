@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="All Client branch finished" />
+    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="All Client branch finished">
+      <change afterPath="$PROJECT_DIR$/src/Persona/Cliente_SimpleProperty.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Persona/Empleado/Empleado_SimpleProperty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Account_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Account_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Manager_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Manager_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Manager_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Manager_View.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -92,7 +100,7 @@
       <workItem from="1678198476336" duration="3018000" />
       <workItem from="1678279584042" duration="4708000" />
       <workItem from="1678285136795" duration="21106000" />
-      <workItem from="1678393529415" duration="96845000" />
+      <workItem from="1678393529415" duration="99477000" />
     </task>
     <task id="LOCAL-00001" summary="Reset">
       <created>1678121595490</created>
@@ -227,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678595015151</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="All Client branch finished">
+      <created>1678595253058</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1678595253058</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +298,11 @@
           <url>file://$PROJECT_DIR$/src/Controllers/Client_Controller.java</url>
           <line>39</line>
           <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Controllers/Home_Controller.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="89" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
