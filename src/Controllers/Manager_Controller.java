@@ -37,7 +37,40 @@ public class Manager_Controller extends Controller{
     }
     @FXML
     void addEmployee(ActionEvent event){
+        try{
+            if(this.addEmp_ADD.getText().equals(""))throw new Exception("");
+            if(this.addEmp_BDay.getText().equals(""))throw new Exception("");
+            if(this.addEmp_Code.getText().equals(""))throw new Exception("");
+            if(this.addEmp_Email.getText().equals(""))throw new Exception("");
+            if(this.addEmp_FirstName.getText().equals(""))throw new Exception("");
+            if(this.addEmp_Phone.getText().equals(""))throw new Exception("");
+            if(this.addEmp_PID.getText().equals(""))throw new Exception("");
+            if(this.addEmp_LastName.getText().equals(""))throw new Exception("");
 
+            banco.crearEmpleado(
+                    this.addEmp_FirstName.getText(),
+                    this.addEmp_LastName.getText(),
+                    this.addEmp_PID.getText(),
+                    this.addEmp_ADD.getText(),
+                    this.addEmp_Phone.getText(),
+                    this.addEmp_Email.getText(),
+                    this.addEmp_BDay.getText(),
+                    this.addEmp_Code.getText(),
+                    4000000);
+            FileManager.writeFile(this.banco);
+            this.banco=FileManager.readFile();
+            this.setManager(banco.getEmpleado(manager.getCodigo()));
+        } catch (Exception e) {}
+        finally {
+            this.addEmp_FirstName.setText("");
+            this.addEmp_LastName.setText("");
+            this.addEmp_PID.setText("");
+            this.addEmp_ADD.setText("");
+            this.addEmp_Phone.setText("");
+            this.addEmp_Email.setText("");
+            this.addEmp_BDay.setText("");
+            this.addEmp_Code.setText("");
+        }
     }
     @FXML
     void saveEmployee(ActionEvent event){
@@ -78,6 +111,77 @@ public class Manager_Controller extends Controller{
     @FXML
     void removeAccount(ActionEvent event){
 
+    }
+
+    public void setManager(Empleado manager) {
+        this.manager = manager;
+        setManagerInfo();
+    }
+
+    private void setManagerInfo() {
+        this.empName.setText(manager.getNombre()+" "+manager.getApellido());
+        this.empID.setText(manager.getCedula());
+        this.empMail.setText(manager.getCorreo());
+        this.empAdd.setText(manager.getDireccion());
+        this.empCode.setText(manager.getCodigo());
+        this.empBDay.setText(manager.getFechaNacimiento());
+        this.empPhone.setText(manager.getTelefono());
+        setEmployeeDisplay();
+        setClientDisplay();
+        setAccountDisplay();
+    }
+    private void setEmployeeDisplay() {
+        this.employeeCode.setCellValueFactory(new PropertyValueFactory<String, Empleado>("codigo"));
+
+        this.employeeName.setCellValueFactory(new PropertyValueFactory<String, Empleado>("nombreCompleto"));
+
+        this.employeeAdd.setCellValueFactory(new PropertyValueFactory<String, Empleado>("direccion"));
+
+        this.employeePID.setCellValueFactory(new PropertyValueFactory<String, Empleado>("cedula"));
+
+        this.employeeBDay.setCellValueFactory(new PropertyValueFactory<String, Empleado>("fechaNacimiento"));
+
+        this.employeeEmail.setCellValueFactory(new PropertyValueFactory<String, Empleado>("correo"));
+
+        this.employeePhone.setCellValueFactory(new PropertyValueFactory<String, Empleado>("telefono"));
+        employees.getItems().clear();
+        for(Empleado empleado:this.banco.getListaEmpleados()){
+            this.employees.getItems().add(empleado);
+        }
+    }
+    private void setClientDisplay() {
+        this.clientID.setCellValueFactory(new PropertyValueFactory<String, Cliente>("cedula"));
+
+        this.clientName.setCellValueFactory(new PropertyValueFactory<String, Cliente>("nombreCompleto"));
+
+        this.clientAdd.setCellValueFactory(new PropertyValueFactory<String, Cliente>("direccion"));
+
+        this.clientEmail.setCellValueFactory(new PropertyValueFactory<String, Cliente>("correo"));
+
+        this.clientBDay.setCellValueFactory(new PropertyValueFactory<String, Cliente>("fechaNacimiento"));
+
+        this.clientPhone.setCellValueFactory(new PropertyValueFactory<String, Cliente>("telefono"));
+        clients.getItems().clear();
+        for(Cliente cliente:this.banco.getListaClientes()){
+            this.clients.getItems().add(cliente);
+        }
+    }
+    private void setAccountDisplay() {
+        this.acc_Balance.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("saldo"));
+
+        this.acc_Name.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("nombre"));
+
+        this.acc_Number.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("numeroCuenta"));
+
+        this.acc_PID.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("id"));
+
+        this.acc_Type.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("tipo"));
+
+        this.accounts.getItems().clear();
+
+        this.banco.getListaCuentas().forEach((k, v) -> {
+            this.accounts.getItems().add(new Cuenta_SimpleProperty(v));
+        });
     }
     @FXML
     private TableView employees;
@@ -219,74 +323,4 @@ public class Manager_Controller extends Controller{
     private Text empBDay;
     @FXML
     private Text empCode;
-    public void setManager(Empleado manager) {
-        this.manager = manager;
-        setManagerInfo();
-    }
-
-    private void setManagerInfo() {
-        this.empName.setText(manager.getNombre()+" "+manager.getApellido());
-        this.empID.setText(manager.getCedula());
-        this.empMail.setText(manager.getCorreo());
-        this.empAdd.setText(manager.getDireccion());
-        this.empCode.setText(manager.getCodigo());
-        this.empBDay.setText(manager.getFechaNacimiento());
-        this.empPhone.setText(manager.getTelefono());
-        setEmployeeDisplay();
-        setClientDisplay();
-        setAccountDisplay();
-    }
-    private void setEmployeeDisplay() {
-        this.employeeCode.setCellValueFactory(new PropertyValueFactory<String, Empleado>("codigo"));
-
-        this.employeeName.setCellValueFactory(new PropertyValueFactory<String, Empleado>("nombreCompleto"));
-
-        this.employeeAdd.setCellValueFactory(new PropertyValueFactory<String, Empleado>("direccion"));
-
-        this.employeePID.setCellValueFactory(new PropertyValueFactory<String, Empleado>("cedula"));
-
-        this.employeeBDay.setCellValueFactory(new PropertyValueFactory<String, Empleado>("fechaNacimiento"));
-
-        this.employeeEmail.setCellValueFactory(new PropertyValueFactory<String, Empleado>("correo"));
-
-        this.employeePhone.setCellValueFactory(new PropertyValueFactory<String, Empleado>("telefono"));
-        employees.getItems().clear();
-        for(Empleado empleado:this.banco.getListaEmpleados()){
-            this.employees.getItems().add(empleado);
-        }
-    }
-    private void setClientDisplay() {
-        this.clientID.setCellValueFactory(new PropertyValueFactory<String, Cliente>("cedula"));
-
-        this.clientName.setCellValueFactory(new PropertyValueFactory<String, Cliente>("nombreCompleto"));
-
-        this.clientAdd.setCellValueFactory(new PropertyValueFactory<String, Cliente>("direccion"));
-
-        this.clientEmail.setCellValueFactory(new PropertyValueFactory<String, Cliente>("correo"));
-
-        this.clientBDay.setCellValueFactory(new PropertyValueFactory<String, Cliente>("fechaNacimiento"));
-
-        this.clientPhone.setCellValueFactory(new PropertyValueFactory<String, Cliente>("telefono"));
-        clients.getItems().clear();
-        for(Cliente cliente:this.banco.getListaClientes()){
-            this.clients.getItems().add(cliente);
-        }
-    }
-    private void setAccountDisplay() {
-        this.acc_Balance.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("saldo"));
-
-        this.acc_Name.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("nombre"));
-
-        this.acc_Number.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("numeroCuenta"));
-
-        this.acc_PID.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("id"));
-
-        this.acc_Type.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("tipo"));
-
-        this.accounts.getItems().clear();
-
-        this.banco.getListaCuentas().forEach((k, v) -> {
-            this.accounts.getItems().add(new Cuenta_SimpleProperty(v));
-        });
-    }
 }
