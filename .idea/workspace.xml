@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Client Window Fully Finished. Info update support aded. Account View Window structure finished.">
-      <change afterPath="$PROJECT_DIR$/src/Transaccion/Transaccion_SimpleProperty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Banco.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Banco.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banco/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/Banco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Banco/IBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/IBanco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Account_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Account_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Account_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Account_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Client_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Client_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Client_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Client_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Transactions_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Transactions_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Transactions_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Transactions_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cuentas/Cuenta.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cuentas/Cuenta.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Empleado/Gerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transaccion/Transaccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaccion/Transaccion.java" afterDir="false" />
-    </list>
+    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="All Client branch finished" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,25 +33,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-19 (2)",
-    "last_opened_file_path": "C:/Users/Samuel/IdeaProjects/Taller_Colecciones/src/fxml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19 (2)&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Samuel/IdeaProjects/Taller_Colecciones/src/fxml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Banco" />
@@ -112,7 +92,7 @@
       <workItem from="1678198476336" duration="3018000" />
       <workItem from="1678279584042" duration="4708000" />
       <workItem from="1678285136795" duration="21106000" />
-      <workItem from="1678393529415" duration="96536000" />
+      <workItem from="1678393529415" duration="96845000" />
     </task>
     <task id="LOCAL-00001" summary="Reset">
       <created>1678121595490</created>
@@ -240,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678564311035</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="All Client branch finished">
+      <created>1678595015151</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1678595015151</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +269,8 @@
     <MESSAGE value="Controllers and FXML format. Login View polished." />
     <MESSAGE value="Resources for FXML" />
     <MESSAGE value="Client Window Fully Finished. Info update support aded. Account View Window structure finished." />
-    <option name="LAST_COMMIT_MESSAGE" value="Client Window Fully Finished. Info update support aded. Account View Window structure finished." />
+    <MESSAGE value="All Client branch finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="All Client branch finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
