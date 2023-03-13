@@ -35,7 +35,7 @@ public class Transactions_Controller extends Controller {
     @FXML
     private String deposit;
 
-    @Deprecated
+    @FXML
     private void goBack(ActionEvent actionEvent) {
         try{
             loader = new FXMLLoader();
@@ -55,7 +55,7 @@ public class Transactions_Controller extends Controller {
             throw new RuntimeException(e);
         }
     }
-    @Deprecated
+    @FXML
     private void createTransaction(ActionEvent event) {
         try {
             String item = this.optionBox.getSelectionModel().getSelectedItem().toString();
@@ -64,15 +64,11 @@ public class Transactions_Controller extends Controller {
             Cliente cliente = this.cuenta.getClienteAsociado();
             if (cliente.getPassword().equals(pswd)) {
                 switch (item) {
-                    case "Withdraw":
-                        this.banco.realizarRetiroCuenta(Double.parseDouble(amount), cuenta.getNumeroCuenta());
-                        break;
-
-                    case "Deposit":
-                        this.banco.depositarDineroCuenta(Double.parseDouble(amount), cuenta.getNumeroCuenta());
-                        break;
-
-                    default: throw new Exception("");
+                    case "Withdraw" ->
+                            this.banco.realizarRetiroCuenta(Double.parseDouble(amount), cuenta.getNumeroCuenta());
+                    case "Deposit" ->
+                            this.banco.depositarDineroCuenta(Double.parseDouble(amount), cuenta.getNumeroCuenta());
+                    default -> throw new Exception("");
                 }
             }
             this.cuenta = banco.getCuenta(cuenta.getNumeroCuenta());

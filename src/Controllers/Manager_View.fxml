@@ -4,7 +4,9 @@
 <?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
@@ -66,6 +68,7 @@
                                                          <columns>
                                                             <TableColumn fx:id="employeeCode" editable="false" prefWidth="195.33331298828125" sortType="DESCENDING" text="Employee ID" />
                                                             <TableColumn fx:id="employeePID" editable="false" prefWidth="75.0" text="PID" />
+                                                            <TableColumn fx:id="employeeManager" editable="false" prefWidth="195.33331298828125" sortType="DESCENDING" text="Manager" />
                                                             <TableColumn fx:id="employeeName" editable="false" prefWidth="387.9999694824219" text="Name" />
                                                             <TableColumn fx:id="employeeBDay" editable="false" prefWidth="75.0" text="B-Day" />
                                                             <TableColumn fx:id="employeeAdd" editable="false" prefWidth="75.0" text="Address" />
@@ -86,7 +89,7 @@
                                                    <children>
                                                       <Pane layoutX="172.0" layoutY="35.0">
                                                          <children>
-                                                            <TextField fx:id="addEmp_Code" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Employee ID" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addEmp_Code" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Employee ID" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -94,7 +97,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addEmp_PID" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="PID" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addEmp_PID" layoutY="65.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="PID" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -102,7 +105,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addEmp_FirstName" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="First Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addEmp_FirstName" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="145.0" promptText="First Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -110,7 +113,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addEmp_LastName" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Last Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addEmp_LastName" layoutX="155.0" layoutY="105.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="145.0" promptText="Last Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -118,7 +121,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addEmp_BDay" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="B-Day" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addEmp_BDay" layoutY="145.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="B-Day" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -126,7 +129,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addEmp_ADD" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Address" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addEmp_ADD" layoutY="185.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Address" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -134,7 +137,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addEmp_Phone" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Phone" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addEmp_Phone" layoutY="225.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Phone" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -142,7 +145,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addEmp_Email" layoutY="280.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addEmp_Email" layoutY="265.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -157,6 +160,7 @@
                                                             <Font name="System Bold" size="16.0" />
                                                          </font>
                                                       </Button>
+                                                      <CheckBox fx:id="addEmp_Man" layoutX="280.0" layoutY="342.0" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #ffffff; -fx-text-fill: #5D1049;" text="Manager" />
                                                    </children>
                                                 </AnchorPane>
                                           </content>
@@ -167,7 +171,7 @@
                                                    <children>
                                                       <Pane layoutX="127.0" layoutY="35.0" prefHeight="397.0" prefWidth="426.0">
                                                          <children>
-                                                            <TextField fx:id="editEmp_Code" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="216.0" promptText="Employee ID" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editEmp_Code" layoutX="6.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="160.0" promptText="Employee ID" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -175,7 +179,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editEmp_PID" layoutX="63.0" layoutY="61.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="PID" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editEmp_PID" layoutX="174.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="160.0" promptText="PID" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -183,7 +187,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editEmp_FirstName" layoutX="63.0" layoutY="101.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="First Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editEmp_FirstName" layoutX="63.0" layoutY="89.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="145.0" promptText="First Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -191,7 +195,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editEmp_LastName" layoutX="63.0" layoutY="141.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Last Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editEmp_LastName" layoutX="213.0" layoutY="89.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="145.0" promptText="Last Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -199,7 +203,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editEmp_BDay" layoutX="63.0" layoutY="181.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="B-Day" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editEmp_BDay" layoutX="63.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="B-Day" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -207,7 +211,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editEmp_ADD" layoutX="63.0" layoutY="221.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Address" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editEmp_ADD" layoutX="63.0" layoutY="169.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Address" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -215,7 +219,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editEmp_Phone" layoutX="63.0" layoutY="261.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Phone" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editEmp_Phone" layoutX="63.0" layoutY="209.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Phone" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -223,7 +227,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editEmp_Email" layoutX="63.0" layoutY="301.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editEmp_Email" layoutX="63.0" layoutY="249.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -231,7 +235,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <Button id="button" layoutX="231.0" mnemonicParsing="false" onAction="#srchEmployee" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #5D1049; -fx-background-radius: 18;" text="Search" textFill="WHITE">
+                                                            <Button id="button" layoutX="340.0" layoutY="15.0" mnemonicParsing="false" onAction="#srchEmployee" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: #5D1049; -fx-background-radius: 18;" text="Search" textFill="WHITE">
                                                                <font>
                                                                   <Font name="System Bold" size="12.0" />
                                                                </font>
@@ -246,6 +250,7 @@
                                                                   <Font name="System Bold" size="16.0" />
                                                                </font>
                                                             </Button>
+                                                            <CheckBox fx:id="editEmp_Man" layoutX="176.0" layoutY="305.0" mnemonicParsing="false" prefWidth="75.0" style="-fx-background-color: #ffffff; -fx-text-fill: #5D1049;" text="Manager" />
                                                          </children>
                                                       </Pane>
                                                    </children>
@@ -291,7 +296,7 @@
                                                    <children>
                                                       <Pane layoutX="172.0" layoutY="55.0">
                                                          <children>
-                                                            <TextField fx:id="addCl_ID" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Client ID" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addCl_ID" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Client ID" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -299,7 +304,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addCl_FirstName" layoutY="40.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="First Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addCl_FirstName" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="145.0" promptText="First Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -307,7 +312,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addCl_LastName" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Last Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addCl_LastName" layoutX="155.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="145.0" promptText="Last Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -315,7 +320,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addCl_BDay" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="B-Day" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addCl_BDay" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="B-Day" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -323,7 +328,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addCl_ADD" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Address" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addCl_ADD" layoutY="140.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Address" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -331,7 +336,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addCl_Phone" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Phone" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addCl_Phone" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Phone" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -339,7 +344,15 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="addCl_Email" layoutY="240.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="addCl_EmpCode" layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Employee Code" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                               <padding>
+                                                                  <Insets left="12.0" />
+                                                               </padding>
+                                                               <opaqueInsets>
+                                                                  <Insets left="12.0" />
+                                                               </opaqueInsets>
+                                                            </TextField>
+                                                            <TextField fx:id="addCl_Email" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -372,7 +385,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editCl_FirstName" layoutX="63.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="First Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editCl_FirstName" layoutX="63.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="145.0" promptText="First Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -380,7 +393,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editCl_LastName" layoutX="63.0" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Last Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editCl_LastName" layoutX="218.0" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="145.0" promptText="Last Name" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -388,7 +401,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editCl_BDay" layoutX="63.0" layoutY="140.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="B-Day" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editCl_BDay" layoutX="63.0" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="B-Day" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -396,7 +409,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editCl_ADD" layoutX="63.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Address" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editCl_ADD" layoutX="63.0" layoutY="140.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Address" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -404,7 +417,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editCl_Phone" layoutX="63.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Phone" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editCl_Phone" layoutX="63.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Phone" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -412,7 +425,7 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <TextField fx:id="editCl_Email" layoutX="63.0" layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                            <TextField fx:id="editCl_Email" layoutX="63.0" layoutY="220.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Email" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
                                                                   <Insets left="12.0" />
                                                                </padding>
@@ -435,6 +448,14 @@
                                                                   <Font name="System Bold" size="16.0" />
                                                                </font>
                                                             </Button>
+                                                            <TextField fx:id="editCl_EmpCode" layoutX="63.0" layoutY="260.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Employee Code" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                               <padding>
+                                                                  <Insets left="12.0" />
+                                                               </padding>
+                                                               <opaqueInsets>
+                                                                  <Insets left="12.0" />
+                                                               </opaqueInsets>
+                                                            </TextField>
                                                          </children>
                                                       </Pane>
                                                    </children>
@@ -477,7 +498,7 @@
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="148.0" prefWidth="680.0">
                                                    <children>
-                                                      <Pane layoutX="172.0" layoutY="55.0">
+                                                      <Pane layoutX="183.0" layoutY="91.0">
                                                          <children>
                                                             <TextField fx:id="addAcc_ID" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Client ID" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
@@ -503,25 +524,32 @@
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                             </TextField>
-                                                            <ComboBox fx:id="addAc_Type" layoutY="120.0" prefHeight="28.0" prefWidth="300.0" promptText="Acount Type" style="-fx-background-color: #ffffff; -fx-border-color: #720D5D; -fx-border-radius: 18; -fx-background-radius: 18; -fx-text-fill: #720D5D;">
+                                                            <ComboBox fx:id="addAc_Type" layoutY="160.0" prefHeight="28.0" prefWidth="300.0" promptText="Acount Type" style="-fx-background-color: #ffffff; -fx-border-color: #720D5D; -fx-border-radius: 18; -fx-background-radius: 18; -fx-text-fill: #720D5D;">
                                                                <opaqueInsets>
                                                                   <Insets left="12.0" />
                                                                </opaqueInsets>
                                                                <items>
                                                                   <FXCollections fx:factory="observableArrayList">
-                                                                     <String fx:id="address" fx:value="Address" />
-                                                                     <String fx:id="phone" fx:value="Phone" />
-                                                                     <String fx:id="email" fx:value="Email" />
+                                                                     <String fx:id="ahorros" fx:value="Ahorros" />
+                                                                     <String fx:id="corriente" fx:value="Corriente" />
                                                                   </FXCollections>
                                                                </items>
                                                             </ComboBox>
+                                                            <TextField fx:id="addAcc_Number" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Account Number" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
+                                                               <padding>
+                                                                  <Insets left="12.0" />
+                                                               </padding>
+                                                               <opaqueInsets>
+                                                                  <Insets left="12.0" />
+                                                               </opaqueInsets>
+                                                            </TextField>
+                                                            <Button id="button" layoutX="49.0" layoutY="211.0" mnemonicParsing="false" onAction="#addAccount" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #5D1049; -fx-background-radius: 18;" text="Add Account" textFill="WHITE">
+                                                               <font>
+                                                                  <Font name="System Bold" size="16.0" />
+                                                               </font>
+                                                            </Button>
                                                          </children>
                                                       </Pane>
-                                                      <Button id="button" layoutX="221.0" layoutY="242.0" mnemonicParsing="false" onAction="#addAccount" prefHeight="36.0" prefWidth="200.0" style="-fx-background-color: #5D1049; -fx-background-radius: 18;" text="Add Account" textFill="WHITE">
-                                                         <font>
-                                                            <Font name="System Bold" size="16.0" />
-                                                         </font>
-                                                      </Button>
                                                    </children>
                                                 </AnchorPane>
                                              </content>
@@ -530,7 +558,7 @@
                                              <content>
                                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="459.0" prefWidth="680.0">
                                                    <children>
-                                                      <Pane layoutX="127.0" layoutY="35.0" prefWidth="426.0">
+                                                      <Pane layoutX="127.0" layoutY="63.0" prefWidth="426.0">
                                                          <children>
                                                             <TextField fx:id="removeAC_ID" layoutX="63.0" layoutY="100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="300.0" promptText="Client ID" style="-fx-background-color: #ffffff; -fx-text-fill: #720D5D; -fx-background-radius: 18; -fx-border-color: #720D5D; -fx-border-radius: 18;">
                                                                <padding>
@@ -590,6 +618,58 @@
                                           </Tab>
                                        </tabs>
                                     </TabPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Update Info">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="420.0">
+                                 <children>
+                                    <Pane layoutX="123.0" layoutY="175.0" prefHeight="200.0" prefWidth="520.0" style="-fx-border-color: #720D5D; -fx-background-color: F1D2F1; -fx-background-radius: 18; -fx-border-radius: 18;">
+                                       <children>
+                                          <Button id="button" layoutX="180.0" layoutY="134.0" mnemonicParsing="false" onAction="#updateInfo" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #5D1049; -fx-background-radius: 18;" text="Update" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <TextField fx:id="infoField" layoutX="60.0" layoutY="64.0" prefHeight="28.0" prefWidth="400.0" promptText="New Info" style="-fx-background-color: #ffffff; -fx-border-color: #720D5D; -fx-background-radius: 18; -fx-border-radius: 18;">
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets left="12.0" />
+                                             </opaqueInsets>
+                                          </TextField>
+                                          <PasswordField fx:id="passwordField" layoutX="60.0" layoutY="99.0" prefHeight="28.0" prefWidth="400.0" promptText="Password" style="-fx-text-fill: #B2B2BF; -fx-border-color: #720D5D; -fx-border-radius: 18; -fx-background-radius: 18;">
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets left="12.0" />
+                                             </opaqueInsets>
+                                          </PasswordField>
+                                          <ComboBox fx:id="optionBox" layoutX="60.0" layoutY="29.0" prefHeight="28.0" prefWidth="400.0" style="-fx-background-color: #ffffff; -fx-border-color: #720D5D; -fx-border-radius: 18; -fx-background-radius: 18; -fx-text-fill: #720D5D;">
+                                             <opaqueInsets>
+                                                <Insets left="12.0" />
+                                             </opaqueInsets>
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+
+                                                   <String fx:id="firstName" fx:value="First Name" />
+                                                   <String fx:id="lastName" fx:value="LastName" />
+                                                   <String fx:id="bDay" fx:value="Birth Day" />
+                                                   <String fx:id="address1" fx:value="Address" />
+                                                   <String fx:id="phone1" fx:value="Phone" />
+                                                   <String fx:id="email1" fx:value="Email" />
+                                                   <String fx:id="employeeID" fx:value="Employee ID" />
+                                                   <String fx:id="iD" fx:value="ID" />
+                                                   <String fx:id="password" fx:value="Password" />
+                                                </FXCollections>
+                                             </items>
+                                          </ComboBox>
+                                       </children>
+                                    </Pane>
                                  </children>
                               </AnchorPane>
                            </content>

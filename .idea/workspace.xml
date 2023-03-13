@@ -7,7 +7,21 @@
     <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="Manager table view configured">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Banco.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Banco.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banco/Banco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/Banco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banco/IBanco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banco/IBanco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Account_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Account_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Client_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Client_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Client_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Client_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Employee_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Employee_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Employee_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Employee_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/Manager_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Manager_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Manager_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Manager_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Transactions_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Transactions_Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Cliente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Cliente_SimpleProperty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Cliente_SimpleProperty.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +111,7 @@
       <workItem from="1678279584042" duration="4708000" />
       <workItem from="1678285136795" duration="21106000" />
       <workItem from="1678393529415" duration="107456000" />
+      <workItem from="1678632036763" duration="33119000" />
     </task>
     <task id="LOCAL-00001" summary="Reset">
       <created>1678121595490</created>
@@ -312,12 +327,32 @@
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Controllers/Account_Controller.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Controllers/Employee_Controller.java</url>
+          <line>156</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Controllers/Employee_Controller.java</url>
+          <line>150</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Controllers/Manager_Controller.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="91" />
+          <line>158</line>
+          <option name="timeStamp" value="121" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="((Persona.Cliente)((Banco.Banco)((Home_Controller)this).banco).listaClientes.toArray()[1]).apellido" custom="Banco.Banco,Persona.Cliente,Controllers.Home_Controller" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

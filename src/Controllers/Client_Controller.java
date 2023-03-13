@@ -23,10 +23,10 @@ public class Client_Controller extends Controller{
     @FXML private Text clientBDate;
     @FXML private Text clientEmployeeName;
     @FXML private Text clientEmployeeEMail;
-    @FXML private TableView accounts;
-    @FXML private TableColumn accountNumber;
-    @FXML private TableColumn accountType;
-    @FXML private TableColumn accountSaldo;
+    @FXML private TableView<Cuenta_SimpleProperty> accounts;
+    @FXML private TableColumn<String, Cuenta_SimpleProperty> accountNumber;
+    @FXML private TableColumn<String, Cuenta_SimpleProperty> accountType;
+    @FXML private TableColumn<String, Cuenta_SimpleProperty> accountSaldo;
     @FXML private ComboBox optionBox;
     @FXML private TextField infoField;
     @FXML private PasswordField passwordField;
@@ -52,7 +52,7 @@ public class Client_Controller extends Controller{
     }
     @FXML private void showAccount(ActionEvent event){
         try{
-            Cuenta_SimpleProperty cuentaAux = (Cuenta_SimpleProperty) this.accounts.getSelectionModel().getSelectedItem();
+            Cuenta_SimpleProperty cuentaAux = this.accounts.getSelectionModel().getSelectedItem();
             if(cuentaAux == null)throw new Exception("");
 
             Cuenta cuenta = this.cliente.getListaCuentasCliente().get(cuentaAux.getNumeroCuenta());
@@ -70,7 +70,7 @@ public class Client_Controller extends Controller{
             stage.setScene(new Scene(root));
             stage.setTitle("Account");
             stage.show();
-        } catch (Exception e) {
+        } catch (Exception ignored) {
         }
     }
     @FXML private void updateInfo(ActionEvent event) {
@@ -80,26 +80,22 @@ public class Client_Controller extends Controller{
             String pswd = this.passwordField.getText();
 
             if(this.cliente.getPassword().equals(pswd)){
-                switch(item) {
-                    case "Address":
-                        this.banco.actualizarCliente(cliente.getCedula(), info, null, null, null);
-                        break;
-
-                    case "Phone":
-                        this.banco.actualizarCliente(cliente.getCedula(), null, info, null, null);
-                        break;
-
-                    case "Email":
-                        this.banco.actualizarCliente(cliente.getCedula(), null, null, info, null);
-                        break;
-
-                    default: throw new Exception("");
+                switch (item) {
+                    case "First Name" -> this.banco.actualizarCliente(cliente.getCedula(),info, null, null, null, null, null, null);
+                    case "Last Name" -> this.banco.actualizarCliente(cliente.getCedula(),null, info, null, null, null, null, null);
+                    case "Address" -> this.banco.actualizarCliente(cliente.getCedula(),null, null, info, null, null, null, null);
+                    case "Phone" -> this.banco.actualizarCliente(cliente.getCedula(),null, null, null, info, null, null, null);
+                    case "Email" -> this.banco.actualizarCliente(cliente.getCedula(),null, null, null, null, info, null, null);
+                    case "Birth Day" -> this.banco.actualizarCliente(cliente.getCedula(),null, null, null, null, null, info, null);
+                    case "ID" -> this.banco.getCliente(cliente.getCedula()).setCedula(info);
+                    case "Password" -> this.banco.getCliente(cliente.getCedula()).setPassword(info);
+                    default -> throw new Exception("");
                 }
             }
             setCliente(this.banco.obtenerCliente(this.cliente.getCedula()));
             this.infoField.setText("");
             this.passwordField.setText("");
-        } catch (Exception e) {
+        } catch (Exception ignored) {
         }
 
     }

@@ -22,14 +22,15 @@ public class Account_Controller extends Controller {
     @FXML private Text accountHolder;
     @FXML private Text clientID;
     @FXML private Text clientEMail;
-    @FXML private TableView transactions;
-    @FXML private TableColumn transactionDate;
-    @FXML private TableColumn transactionType;
-    @FXML private TableColumn transactionAmount;
+    @FXML private TableView<Transaccion_SimpleProperty> transactions;
+    @FXML private TableColumn<String, Transaccion_SimpleProperty> transactionDate;
+    @FXML private TableColumn<String, Transaccion_SimpleProperty> transactionType;
+    @FXML private TableColumn<String, Transaccion_SimpleProperty> transactionAmount;
 
     @FXML private void goToTransactions(ActionEvent event){
         try{
-            loader = new FXMLLoader(getClass().getResource("Transactions_View.fxml"));
+            loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("Transactions_View.fxml"));
             root = loader.load();
             FileManager.writeFile(banco);
             Cliente cliente = this.cuenta.getClienteAsociado();
@@ -42,7 +43,7 @@ public class Account_Controller extends Controller {
             stage.setScene(new Scene(root));
             stage.setTitle("Transactions");
             stage.show();
-        } catch (Exception e) {}
+        } catch (Exception ignored) {}
     }
     @FXML private void goBack(ActionEvent event){
         try{
@@ -59,7 +60,7 @@ public class Account_Controller extends Controller {
             stage.setScene(new Scene(root));
             stage.setTitle("Client");
             stage.show();
-        }catch (Exception e){}
+        }catch (Exception ignored){}
     }
     public void setCuenta(Cuenta cuenta) {
         this.cuenta = cuenta;

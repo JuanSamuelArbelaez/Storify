@@ -15,16 +15,16 @@ import java.util.TreeSet;
 public class Banco implements IBanco, Serializable {
     public Banco(){
         try {
-            crearEmpleado("Robinson", "Arias", "0987654321", "Uniquindio", "300 481 2192", "robinsonarias@uniquindo.com", "1492", "666", 7000000);
-            crearCliente("Marta", "Henao", "1234567890", "o", "284", "au@gmail.com", "28/10/1982");
-            getEmpleado("666").setManager(true);
+            crearEmpleado("Robinson", "Arias", "0987654321", "Uniquindio", "300 481 2192", "robinsonarias@uniquindo.com", "17/07/1995", "7777", 7000000);
+            crearCliente("Marta", "Henao", "1234567890", "Laureles", "312 928 0334", "mhenao@gmail.com", "28/10/1982", getEmpleado("7777"));
+            getEmpleado("7777").setManager(true);
             Cliente cliente = getCliente("1234567890");
             cliente.addCuenta(new CuentaAhorro("423101290", 1050000, null, cliente));
             updateAccounts();
             realizarRetiroCuenta(30000, "423101290");
             updateAccounts();
             FileManager.writeFile(this);
-        } catch (Exception e) {
+        } catch (Exception ignored) {
         }
     }
     private HashSet<Cliente> listaClientes = new HashSet<>();
@@ -50,7 +50,7 @@ public class Banco implements IBanco, Serializable {
     @Override
     public void crearEmpleado(String nombre, String apellido, String cedula, String direccion, String telefono, String correo, String fechaNacimiento, String codigo, double salario) throws Exception {
         for (Empleado empleado : listaEmpleados) {
-            if (empleado.getNombre().equals(nombre) && empleado.getCodigo().equals(codigo) && empleado.getCedula().equals(cedula)){
+            if (empleado.getCodigo().equals(codigo) || empleado.getCedula().equals(cedula)){
                 throw new Exception("Este empleado ya existe");
             }
         }
@@ -58,16 +58,17 @@ public class Banco implements IBanco, Serializable {
     }
 
     @Override
-    public void actualizarEmpleado(String codigo, String cedula, String direccion, String telefono, String correo, Double salario, HashSet<Cliente> clientes) {
+    public void actualizarEmpleado(String codigo, String cedula, String nombre, String apellido, String direccion, String telefono, String correo, String fechaNacimeinto, Double salario, HashSet<Cliente> clientes) {
         try{
             Empleado empleado = obtenerEmpleado(codigo, cedula);
+            if(nombre!=null)empleado.setNombre(nombre);
+            if(apellido!=null)empleado.setApellido(apellido);
             if(direccion!=null)empleado.setDireccion(direccion);
             if(telefono!=null)empleado.setTelefono(telefono);
             if(correo!=null)empleado.setCorreo(correo);
             if(salario==null)empleado.setSalario(salario);
             if(clientes!=null)empleado.setClientes(clientes);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        } catch (Exception ignored) {
         }
     }
 
@@ -77,10 +78,9 @@ public class Banco implements IBanco, Serializable {
             Empleado empleado = obtenerEmpleado(codigo, cedula);
             listaEmpleados.remove(empleado);
             for(Cliente cliente: listaClientes){
-                if(cliente.getEmpleadoAsociado().equals(empleado))cliente.setEmpleadoAsociado(null);
+                if(cliente.getEmpleadoAsociado().getCodigo().equals(empleado.getCodigo()))cliente.setEmpleadoAsociado(null);
             }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        } catch (Exception ignored) {
         }
     }
 
@@ -92,25 +92,27 @@ public class Banco implements IBanco, Serializable {
         throw new Exception("Empleado no encontrado");
     }
     @Override
-    public void crearCliente(String nombre, String apellido, String cedula, String direccion, String telefono, String correo, String fechaNacimiento) throws Exception {
+    public void crearCliente(String nombre, String apellido, String cedula, String direccion, String telefono, String correo, String fechaNacimiento, Empleado empleadoAsociado) throws Exception {
         for (Cliente cliente : listaClientes) {
             if (cliente.getNombre().equals(nombre) && cliente.getCedula().equals(cedula)){
                 throw new Exception("Este cliente ya existe");
             }
         }
-        listaClientes.add(new Cliente(nombre, apellido, cedula, direccion, telefono, correo, fechaNacimiento, null, null, null));
+        listaClientes.add(new Cliente(nombre, apellido, cedula, direccion, telefono, correo, fechaNacimiento, empleadoAsociado, null, null));
     }
 
     @Override
-    public void actualizarCliente(String cedula, String direccion, String telefono, String correo, Empleado empleadoAsociado) {
+    public void actualizarCliente(String cedula, String nombre, String apellido, String direccion, String telefono, String correo, String fechaNacimiento, Empleado empleadoAsociado) {
         try{
             Cliente cliente = obtenerCliente(cedula);
+            if(nombre!=null)cliente.setNombre(nombre);
+            if(apellido!=null)cliente.setApellido(apellido);
             if(direccion!=null)cliente.setDireccion(direccion);
             if(telefono!=null)cliente.setTelefono(telefono);
             if(correo!=null)cliente.setCorreo(correo);
-            if(empleadoAsociado!=null)cliente.setEmpleadoAsociado(empleadoAsociado);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+            if(fechaNacimiento!=null) cliente.setFechaNacimiento(fechaNacimiento);
+            if(empleadoAsociado!=null) cliente.setEmpleadoAsociado(empleadoAsociado);
+        } catch (Exception ignored) {
         }
     }
 
@@ -155,29 +157,26 @@ public class Banco implements IBanco, Serializable {
     }
 
     @Override
-    public boolean realizarRetiroCuenta(double valor, String numeroCuenta) throws Exception {
+    public void realizarRetiroCuenta(double valor, String numeroCuenta) throws Exception {
         Cuenta cuenta = getCuenta(numeroCuenta);
         cuenta.retirarDinero(valor);
         this.updateAccounts();
         cuenta.setSaldo(cuenta.getSaldo()-valor);
-        return true;
     }
 
     @Override
-    public boolean depositarDineroCuenta(double valor, String numeroCuenta) throws Exception {
+    public void depositarDineroCuenta(double valor, String numeroCuenta) throws Exception {
         Cuenta cuenta = getCuenta(numeroCuenta);
         cuenta.depositarDinero(valor);
         this.updateAccounts();
         cuenta.setSaldo(cuenta.getSaldo()+valor);
-        return true;
     }
 
     @Override
-    public double consultarSaldoCuenta(String numeroCuenta) {
+    public void consultarSaldoCuenta(String numeroCuenta) {
         try{
             double amount= getCuenta(numeroCuenta).getSaldo();
             this.updateAccounts();
-            return amount;
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
@@ -205,6 +204,22 @@ public class Banco implements IBanco, Serializable {
             if(cliente.getCedula().equals(cedula))return cliente;
         }
         throw new Exception("");
+    }
+    @Override
+    public void addCuenta(Cuenta cuenta){
+        try {
+            this.listaCuentas.put(cuenta.getNumeroCuenta(), cuenta);
+            cuenta.getClienteAsociado().addCuenta(cuenta);
+        } catch (Exception ignored) {
+        }
+    }
+    @Override
+    public void eliminarCuenta(Cuenta account) {
+        try{
+            this.listaCuentas.remove(account.getNumeroCuenta(), account);
+            account.getClienteAsociado().getListaCuentasCliente().remove(account.getNumeroCuenta(), account);
+        } catch (Exception ignored) {
+        }
     }
     public void updateAccounts(){
         for(Cliente cliente: this.listaClientes){

@@ -49,6 +49,7 @@ public class Home_Controller extends Controller {
         try {
             Empleado empleado = banco.obtenerEmpleado(emp_Code_Field.getText(), emp_ID_Field.getText());
             if(!empleado.getPassword().equals(emp_Password_Field.getText()))throw new Exception("");
+            FileManager.writeFile(banco);
             if(empleado.isManager()){
                 loader = new FXMLLoader(getClass().getResource("Manager_View.fxml"));
                 root = loader.load();
@@ -57,8 +58,15 @@ public class Home_Controller extends Controller {
                 managerController.setBanco();
                 managerController.setManager(empleado);
             }
-            else root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Employee_View.fxml")));
-            FileManager.writeFile(banco);
+            else {
+                loader = new FXMLLoader(getClass().getResource("Employee_View.fxml"));
+                root = loader.load();
+
+                Employee_Controller employeeController = loader.getController();
+                employeeController.setBanco();
+                employeeController.setEmployee(empleado);
+            }
+
 
             stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));

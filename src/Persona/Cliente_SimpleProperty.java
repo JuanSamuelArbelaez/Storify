@@ -9,5 +9,6 @@ public class Cliente_SimpleProperty {
     private SimpleStringProperty direccion = new SimpleStringProperty("");
     private SimpleStringProperty telefono = new SimpleStringProperty("");
     private SimpleStringProperty correo = new SimpleStringProperty("");
+    private SimpleStringProperty empleado = new SimpleStringProperty("");
 
 }

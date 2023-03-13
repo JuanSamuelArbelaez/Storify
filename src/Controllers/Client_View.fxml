@@ -6,6 +6,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -97,63 +99,81 @@
          <center>
             <Pane prefHeight="585.0" prefWidth="764.0" BorderPane.alignment="CENTER">
                <children>
-                  <Pane layoutX="85.0" layoutY="78.0">
-                     <children>
-                        <TableView fx:id="accounts" prefHeight="200.0" prefWidth="446.0" style="-fx-border-color: #720D5D;">
-                          <columns>
-                            <TableColumn fx:id="accountNumber" maxWidth="170.0" prefWidth="170.0" resizable="false" text="Account Number" />
-                              <TableColumn fx:id="accountSaldo" maxWidth="170.0" prefWidth="170.0" resizable="false" text="Balance" />
-                            <TableColumn fx:id="accountType" prefWidth="106.0" text="Account Type" />
-                          </columns>
-                        </TableView>
-                        <Pane layoutX="468.0" layoutY="16.0" prefHeight="163.0" prefWidth="150.0">
-                           <children>
-                              <Button id="button" layoutY="62.0" mnemonicParsing="false" onAction="#showAccount" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #5D1049; -fx-background-radius: 18;" text="See Account" textFill="WHITE">
-                                 <font>
-                                    <Font name="System Bold" size="16.0" />
-                                 </font>
-                              </Button>
-                           </children>
-                        </Pane>
-                     </children>
-                  </Pane>
-                  <Pane layoutX="122.0" layoutY="334.0" prefHeight="200.0" prefWidth="520.0" style="-fx-border-color: #720D5D; -fx-background-color: F1D2F1; -fx-background-radius: 18; -fx-border-radius: 18;">
-                     <children>
-                        <Button id="button" layoutX="180.0" layoutY="134.0" mnemonicParsing="false" onAction="#updateInfo" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #5D1049; -fx-background-radius: 18;" text="Update" textFill="WHITE">
-                           <font>
-                              <Font name="System Bold" size="16.0" />
-                           </font>
-                        </Button>
-                        <TextField fx:id="infoField" layoutX="60.0" layoutY="64.0" prefHeight="28.0" prefWidth="400.0" promptText="New Info" style="-fx-background-color: #ffffff; -fx-border-color: #720D5D; -fx-background-radius: 18; -fx-border-radius: 18;">
-                           <padding>
-                              <Insets left="12.0" />
-                           </padding>
-                           <opaqueInsets>
-                              <Insets left="12.0" />
-                           </opaqueInsets>
-                        </TextField>
-                        <PasswordField fx:id="passwordField" layoutX="60.0" layoutY="99.0" prefHeight="28.0" prefWidth="400.0" promptText="Password" style="-fx-text-fill: #B2B2BF; -fx-border-color: #720D5D; -fx-border-radius: 18; -fx-background-radius: 18;">
-                           <padding>
-                              <Insets left="12.0" />
-                           </padding>
-                           <opaqueInsets>
-                              <Insets left="12.0" />
-                           </opaqueInsets>
-                        </PasswordField>
-                        <ComboBox fx:id="optionBox" layoutX="60.0" layoutY="29.0" prefHeight="28.0" prefWidth="400.0" style="-fx-background-color: #ffffff; -fx-border-color: #720D5D; -fx-border-radius: 18; -fx-background-radius: 18; -fx-text-fill: #720D5D;">
-                           <opaqueInsets>
-                              <Insets left="12.0" />
-                           </opaqueInsets>
-                           <items>
-                              <FXCollections fx:factory="observableArrayList">
-                                 <String fx:id="address" fx:value="Address" />
-                                 <String fx:id="phone" fx:value="Phone" />
-                                 <String fx:id="email" fx:value="Email" />
-                              </FXCollections>
-                           </items>
-                        </ComboBox>
-                     </children>
-                  </Pane>
+                  <TabPane prefHeight="583.0" prefWidth="761.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="Accounts">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <AnchorPane layoutX="33.0" layoutY="490.0" />
+                                    <Button id="button" layoutX="308.0" layoutY="472.0" mnemonicParsing="false" onAction="#showAccount" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #5D1049; -fx-background-radius: 18;" text="See Account" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Button>
+                                    <TableView fx:id="accounts" layoutX="82.0" layoutY="51.0" prefHeight="400.0" prefWidth="600.0" style="-fx-border-color: #720D5D;">
+                                      <columns>
+                                        <TableColumn fx:id="accountNumber" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" resizable="false" text="Account Number" />
+                                          <TableColumn fx:id="accountSaldo" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" resizable="false" text="Balance" />
+                                        <TableColumn fx:id="accountType" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Account Type" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Update Info">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane layoutX="119.0" layoutY="162.0" prefHeight="200.0" prefWidth="520.0" style="-fx-border-color: #720D5D; -fx-background-color: F1D2F1; -fx-background-radius: 18; -fx-border-radius: 18;">
+                                       <children>
+                                          <Button id="button" layoutX="180.0" layoutY="134.0" mnemonicParsing="false" onAction="#updateInfo" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #5D1049; -fx-background-radius: 18;" text="Update" textFill="WHITE">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <TextField fx:id="infoField" layoutX="60.0" layoutY="64.0" prefHeight="28.0" prefWidth="400.0" promptText="New Info" style="-fx-background-color: #ffffff; -fx-border-color: #720D5D; -fx-background-radius: 18; -fx-border-radius: 18;">
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets left="12.0" />
+                                             </opaqueInsets>
+                                          </TextField>
+                                          <PasswordField fx:id="passwordField" layoutX="60.0" layoutY="99.0" prefHeight="28.0" prefWidth="400.0" promptText="Password" style="-fx-text-fill: #B2B2BF; -fx-border-color: #720D5D; -fx-border-radius: 18; -fx-background-radius: 18;">
+                                             <padding>
+                                                <Insets left="12.0" />
+                                             </padding>
+                                             <opaqueInsets>
+                                                <Insets left="12.0" />
+                                             </opaqueInsets>
+                                          </PasswordField>
+                                          <ComboBox fx:id="optionBox" layoutX="60.0" layoutY="29.0" prefHeight="28.0" prefWidth="400.0" style="-fx-background-color: #ffffff; -fx-border-color: #720D5D; -fx-border-radius: 18; -fx-background-radius: 18; -fx-text-fill: #720D5D;">
+                                             <opaqueInsets>
+                                                <Insets left="12.0" />
+                                             </opaqueInsets>
+                                             <items>
+                                                <FXCollections fx:factory="observableArrayList">
+                                                   <String fx:id="iD" fx:value="ID" />
+                                                   <String fx:id="password" fx:value="Password" />
+                                                   <String fx:id="firstName" fx:value="First Name" />
+                                                   <String fx:id="lastName" fx:value="LastName" />
+                                                   <String fx:id="bDay" fx:value="Birth Day" />
+                                                   <String fx:id="address" fx:value="Address" />
+                                                   <String fx:id="phone" fx:value="Phone" />
+                                                   <String fx:id="email" fx:value="Email" />
+                                                </FXCollections>
+                                             </items>
+                                          </ComboBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
                </children>
             </Pane>
          </center>

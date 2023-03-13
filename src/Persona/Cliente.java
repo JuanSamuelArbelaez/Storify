@@ -15,7 +15,7 @@ public class Cliente extends Persona{
         this.empleadoAsociado = empleadoAsociado;
         this.listaCuentasCliente = Objects.requireNonNullElseGet(listaCuentasCliente, () -> new HashMap<String, Cuenta>());
         this.listaTransacciones = Objects.requireNonNullElseGet(listaTransacciones, () -> new HashMap<String, Transaccion>());
-
+        empleadoAsociado.addClient(this);
     }
     public Empleado getEmpleadoAsociado() {return empleadoAsociado;}
     public void setEmpleadoAsociado(Empleado empleadoAsociado) {this.empleadoAsociado = empleadoAsociado;}

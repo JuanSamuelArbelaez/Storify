@@ -15,7 +15,7 @@ public class Controller {
     public void setBanco() {
         try {
             this.banco = FileManager.readFile();
-        } catch (Exception e) {
+        } catch (Exception ignored) {
         }
     }
 }
