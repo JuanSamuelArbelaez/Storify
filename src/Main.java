@@ -18,8 +18,8 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Controllers/Home_View.fxml"));
         Parent root = loader.load();
 
-        banco = new Banco();
-        //banco = FileManager.readFile();
+        //banco = new Banco();
+        banco = FileManager.readFile();
 
         Home_Controller homeController = loader.getController();
         homeController.setBanco();
