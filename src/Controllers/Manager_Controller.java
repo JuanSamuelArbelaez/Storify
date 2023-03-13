@@ -342,6 +342,8 @@ public class Manager_Controller extends Controller{
         }
     }
     private void setClientDisplay() {
+        this.clientEmployee.setCellValueFactory(new PropertyValueFactory<>("employee"));
+
         this.clientID.setCellValueFactory(new PropertyValueFactory<String, Cliente>("cedula"));
 
         this.clientName.setCellValueFactory(new PropertyValueFactory<String, Cliente>("nombreCompleto"));
@@ -359,6 +361,7 @@ public class Manager_Controller extends Controller{
         }
     }
     private void setAccountDisplay() {
+
         this.acc_Balance.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("saldo"));
 
         this.acc_Name.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("nombre"));
@@ -438,6 +441,7 @@ public class Manager_Controller extends Controller{
     @FXML private TextField editEmp_Phone;
     @FXML private TextField editEmp_Email;
     @FXML private TableView<Cliente> clients;
+    @FXML private TableColumn<String, Cliente> clientEmployee;
     @FXML private TableColumn<String, Cliente> clientID;
     @FXML private TableColumn<String, Cliente> clientName;
     @FXML private TableColumn<String, Cliente> clientBDay;
@@ -468,9 +472,6 @@ public class Manager_Controller extends Controller{
     @FXML private TextField addAc_Name;
     @FXML private TextField addAc_LastName;
     @FXML private ComboBox addAc_Type;
-    @FXML private String address;
-    @FXML private String phone;
-    @FXML private String email;
     @FXML private TextField removeAC_ID;
     @FXML private TextField removeAc_Name;
     @FXML private TextField removeAc_LastName;

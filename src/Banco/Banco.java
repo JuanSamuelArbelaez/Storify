@@ -111,7 +111,7 @@ public class Banco implements IBanco, Serializable {
             if(telefono!=null)cliente.setTelefono(telefono);
             if(correo!=null)cliente.setCorreo(correo);
             if(fechaNacimiento!=null) cliente.setFechaNacimiento(fechaNacimiento);
-            if(empleadoAsociado!=null) cliente.setEmpleadoAsociado(empleadoAsociado);
+            if(empleadoAsociado!=null)cliente.setEmpleadoAsociado(empleadoAsociado);
         } catch (Exception ignored) {
         }
     }

@@ -275,6 +275,7 @@
                                                    <children>
                                                       <TableView fx:id="clients" layoutX="20.0" layoutY="20.0" prefHeight="459.0" prefWidth="641.0">
                                                          <columns>
+                                                            <TableColumn fx:id="clientEmployee" editable="false" prefWidth="387.9999694824219" text="Employee" />
                                                             <TableColumn fx:id="clientID" editable="false" prefWidth="75.0" text="PID" />
                                                             <TableColumn fx:id="clientName" editable="false" prefWidth="387.9999694824219" text="Name" />
                                                             <TableColumn fx:id="clientBDay" editable="false" prefWidth="75.0" text="B-Day" />

@@ -18,7 +18,6 @@ import javafx.stage.Stage;
 
 public class Employee_Controller extends Controller{
     private Empleado employee = null;
-    private Cliente client = null;
     private Cuenta account = null;
 
     @FXML
@@ -123,36 +122,38 @@ public class Employee_Controller extends Controller{
         setAccountDisplay();
     }
     private void setClientDisplay() {
-        this.clientID.setCellValueFactory(new PropertyValueFactory<String, Cliente>("cedula"));
+        this.clientEmployee.setCellValueFactory(new PropertyValueFactory<>("employee"));
 
-        this.clientName.setCellValueFactory(new PropertyValueFactory<String, Cliente>("nombreCompleto"));
+        this.clientID.setCellValueFactory(new PropertyValueFactory<>("cedula"));
 
-        this.clientAdd.setCellValueFactory(new PropertyValueFactory<String, Cliente>("direccion"));
+        this.clientName.setCellValueFactory(new PropertyValueFactory<>("nombreCompleto"));
 
-        this.clientEmail.setCellValueFactory(new PropertyValueFactory<String, Cliente>("correo"));
+        this.clientAdd.setCellValueFactory(new PropertyValueFactory<>("direccion"));
 
-        this.clientBDay.setCellValueFactory(new PropertyValueFactory<String, Cliente>("fechaNacimiento"));
+        this.clientEmail.setCellValueFactory(new PropertyValueFactory<>("correo"));
 
-        this.clientPhone.setCellValueFactory(new PropertyValueFactory<String, Cliente>("telefono"));
+        this.clientBDay.setCellValueFactory(new PropertyValueFactory<>("fechaNacimiento"));
+
+        this.clientPhone.setCellValueFactory(new PropertyValueFactory<>("telefono"));
         clients.getItems().clear();
         for(Cliente cliente:this.banco.getListaClientes()){
             this.clients.getItems().add(cliente);
         }
     }
     private void setAccountDisplay() {
-        this.acc_Balance.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("saldo"));
+        this.acc_Balance.setCellValueFactory(new PropertyValueFactory<>("saldo"));
 
-        this.acc_Name.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("nombre"));
+        this.acc_Name.setCellValueFactory(new PropertyValueFactory<>("nombre"));
 
-        this.acc_Number.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("numeroCuenta"));
+        this.acc_Number.setCellValueFactory(new PropertyValueFactory<>("numeroCuenta"));
 
-        this.acc_PID.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("id"));
+        this.acc_PID.setCellValueFactory(new PropertyValueFactory<>("id"));
 
-        this.acc_Type.setCellValueFactory(new PropertyValueFactory<String, Cuenta_SimpleProperty>("tipo"));
+        this.acc_Type.setCellValueFactory(new PropertyValueFactory<>("tipo"));
 
         this.accounts.getItems().clear();
 
-        banco.getListaCuentas().forEach((k, v) -> {this.accounts.getItems().add(new Cuenta_SimpleProperty(v));});
+        banco.getListaCuentas().forEach((k, v) -> this.accounts.getItems().add(new Cuenta_SimpleProperty(v)));
     }
     private void resetAccountEditValues() {
         this.removeAC_ID.setText("");
@@ -164,6 +165,8 @@ public class Employee_Controller extends Controller{
     }
     @FXML
     private TableView<Cliente> clients;
+    @FXML
+    private TableColumn<String, Cliente> clientEmployee;
     @FXML
     private TableColumn<String, Cliente> clientID;
     @FXML
@@ -197,10 +200,6 @@ public class Employee_Controller extends Controller{
     @FXML
     private ComboBox addAc_Type;
     @FXML
-    private String ahorros;
-    @FXML
-    private String corriente;
-    @FXML
     private TextField addAcc_Number;
     @FXML
     private TextField removeAC_ID;
@@ -218,24 +217,6 @@ public class Employee_Controller extends Controller{
     private PasswordField passwordField;
     @FXML
     private ComboBox optionBox;
-    @FXML
-    private String firstName;
-    @FXML
-    private String lastName;
-    @FXML
-    private String bDay;
-    @FXML
-    private String address1;
-    @FXML
-    private String phone1;
-    @FXML
-    private String email1;
-    @FXML
-    private String employeeID;
-    @FXML
-    private String iD;
-    @FXML
-    private String password;
     @FXML
     private Text empName;
     @FXML
