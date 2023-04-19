@@ -72,6 +72,7 @@ public class Home_Controller extends Controller {
         box.setStyle("-fx-background-color: #E4E4E4; -fx-border-width: 0 0 3 0; -fx-border-color:  #720d5d;");
     }
     @FXML public void search(MouseEvent mouseEvent) {
+
     }
     public void setData(User user) {
         super.setData();
