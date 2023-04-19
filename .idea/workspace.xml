@@ -4,13 +4,85 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="V1.0 fully functional">
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Employee_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Employee_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Employee_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Employee_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Manager_Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Manager_Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/Manager_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Manager_View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Persona/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Persona/Cliente_SimpleProperty.java" beforeDir="false" />
+    <list default="true" id="7689ee21-63e6-400e-a8ec-4c9c296234f8" name="Changes" comment="V1.0 fully functional. Code Polish">
+      <change afterPath="$PROJECT_DIR$/Stor.fy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controllers/Admin/Admin_Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controllers/Admin/Admin_View.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controllers/Home/Home_Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controllers/Home/Home_Style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controllers/Home/Home_View.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controllers/Login/Login_Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controllers/Slider/Slider_Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controllers/Slider/Slider_View.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controllers/Thumbnail/Thumbnail_Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Assets/Admin/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Assets/Admin/Admin_Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Assets/Artist/Artist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Assets/Artist/Artist_Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Assets/Song/Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Assets/Song/Song_Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Assets/Song/Thumbnail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Assets/User/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Assets/User/User_Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/BinaryTree/BinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/BinaryTree/BinaryTree_Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/CircularList/CircularList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/CircularList/CircularList_Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/DoubleLinkedList/DoubleLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/DoubleLinkedList/DoubleLinked_Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/HashMap/HashMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/HashMap/HashMap_Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/LinkedList/LinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/LinkedList/LinkedList_Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/Nodes/BinaryNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/Nodes/DoubleLinkedNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/Nodes/HashNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/Nodes/LinkedNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/Nodes/Node.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/Queue/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Structures/Queue/Queue_Interface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Tools/ImageManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Storify/Storify.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Banco.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Taller_Colecciones.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Storify.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banco/Banco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banco/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Tools/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banco/IBanco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Account_Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Account_View.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Client_Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Client_View.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Employee_Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Employee_View.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Home_Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Home_View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/Login/Login_View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Manager_Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Manager_View.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Transactions_Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/Transactions_View.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/Cuenta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/CuentaAhorro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/CuentaCorriente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/Cuenta_SimpleProperty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Cuentas/ICuenta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/AsesorVentas.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Cajero.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Empleado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Empleado_SimpleProperty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Empleado/Gerente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Persona/Persona.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaccion/ConsultaSaldo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaccion/Deposito.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaccion/Retiro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaccion/Transaccion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Transaccion/Transaccion_SimpleProperty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Logo_Cliente.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/Logo_Empleado.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +92,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="module-info" />
-        <option value="FxmlFile" />
+        <option value="CSS File" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -40,38 +113,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19 (2)&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Samuel/IdeaProjects/Taller_Colecciones/src/fxml&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "openjdk-19 (2)",
+    "last_opened_file_path": "C:/Users/Samuel/Documents/fontawesomefx-8.9.jar",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="Model.Structures.Queue" />
       <recent name="Banco" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones - copia\src" />
       <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones\src\fxml" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Samuel\IdeaProjects\Storify v0.1-8\src\Controllers\Home" />
+      <recent name="C:\Users\Samuel\IdeaProjects\Storify v0.1-8\src\Controllers" />
+      <recent name="C:\Users\Samuel\IdeaProjects\Storify v0.1-8\src\Controllers\Login" />
       <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones\src\Controllers" />
       <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones\src" />
-      <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones\src\Resources\images" />
-      <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones\src\Resources" />
-      <recent name="C:\Users\Samuel\IdeaProjects\Taller_Colecciones\src\main\java" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
@@ -80,7 +156,7 @@
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Taller_Colecciones" />
+      <module name="Storify" />
       <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Samuel\Documents\FX\javafx-sdk-19.0.2.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -100,7 +176,15 @@
       <workItem from="1678279584042" duration="4708000" />
       <workItem from="1678285136795" duration="21106000" />
       <workItem from="1678393529415" duration="107456000" />
-      <workItem from="1678632036763" duration="34483000" />
+      <workItem from="1678632036763" duration="35440000" />
+      <workItem from="1678716342288" duration="1659000" />
+      <workItem from="1678723667301" duration="5313000" />
+      <workItem from="1681301688728" duration="921000" />
+      <workItem from="1681584527178" duration="1878000" />
+      <workItem from="1681685974589" duration="595000" />
+      <workItem from="1681688706697" duration="4666000" />
+      <workItem from="1681705525415" duration="23966000" />
+      <workItem from="1681863238957" duration="34965000" />
     </task>
     <task id="LOCAL-00001" summary="Reset">
       <created>1678121595490</created>
@@ -263,7 +347,21 @@
       <option name="project" value="LOCAL" />
       <updated>1678678728207</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="V1.0 fully functional. Code Polish">
+      <created>1678680136837</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1678680136837</updated>
+    </task>
+    <task id="LOCAL-00025" summary="V1.0 fully functional. Code Polish">
+      <created>1678680162806</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678680162806</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,35 +407,32 @@
     <MESSAGE value="Manager window view finished" />
     <MESSAGE value="Manager table view configured" />
     <MESSAGE value="V1.0 fully functional" />
-    <option name="LAST_COMMIT_MESSAGE" value="V1.0 fully functional" />
+    <MESSAGE value="V1.0 fully functional. Code Polish" />
+    <option name="LAST_COMMIT_MESSAGE" value="V1.0 fully functional. Code Polish" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.io.NotSerializableException" package="java.io" />
-          <option name="timeStamp" value="20" />
-        </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controllers/Client_Controller.java</url>
+          <url>file://$PROJECT_DIR$/src/Controllers/Home/Home_Controller.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Model/Tools/ImageManager.java</url>
           <line>39</line>
-          <option name="timeStamp" value="76" />
+          <option name="timeStamp" value="162" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controllers/Account_Controller.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="93" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Controllers/Manager_Controller.java</url>
-          <line>158</line>
-          <option name="timeStamp" value="121" />
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="163" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
-        <watch expression="((Persona.Cliente)((Banco.Banco)((Home_Controller)this).banco).listaClientes.toArray()[1]).apellido" custom="Banco.Banco,Persona.Cliente,Controllers.Home_Controller" />
+        <watch expression="loader" />
       </configuration>
     </watches-manager>
   </component>

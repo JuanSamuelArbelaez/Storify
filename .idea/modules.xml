@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Taller_Colecciones.iml" filepath="$PROJECT_DIR$/Taller_Colecciones.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Storify.iml" filepath="$PROJECT_DIR$/Storify.iml" />
     </modules>
   </component>
 </project>

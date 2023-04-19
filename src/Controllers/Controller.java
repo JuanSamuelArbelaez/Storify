@@ -1,20 +1,21 @@
 package Controllers;
-import Banco.*;
+import Model.Assets.User.User;
+import Model.Tools.FileManager;
+import Storify.*;
 import javafx.fxml.*;
 import javafx.scene.*;
 import javafx.stage.Stage;
 
 public class Controller {
-    public Banco banco;
+    public Storify storify;
     public Stage stage;
-
     public Scene scene;
     public Parent root;
     public FXMLLoader loader;
-
-    public void setBanco() {
+    public Controller(){setData();}
+    public void setData() {
         try {
-            this.banco = FileManager.readFile();
+            this.storify = FileManager.readFile();
         } catch (Exception ignored) {
         }
     }

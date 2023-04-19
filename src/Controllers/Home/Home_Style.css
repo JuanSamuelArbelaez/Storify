@@ -1,0 +1,8 @@
+.tab:hover{
+    -fx-background-color: #E4E4E4;
+}
+
+.thumbnail{
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color: #720d5d;
+}

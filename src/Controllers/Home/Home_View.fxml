@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="702.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Home.Home_Controller">
+   <bottom>
+      <HBox prefHeight="120.0" prefWidth="702.0" style="-fx-border-width: 2 0 0 0; -fx-border-color: #363636;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="480.0">
+               <children>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="428.0">
+                     <children>
+                        <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="90.0" styleClass="thumbnail" stylesheets="@Home_Style.css">
+                           <children>
+                              <ImageView fx:id="songThumbnail" fitHeight="50.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Pane>
+                        <VBox prefHeight="49.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="songTitle" prefHeight="17.0" prefWidth="200.0" text="Song:">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <Label fx:id="songArtist" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="200.0" text="Artist:" />
+                              <Label fx:id="songAlbum" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" text="Album:" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox>
+                           <children>
+                              <Label fx:id="songYear" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" text="Year:" />
+                              <Label fx:id="songGenre" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="100.0" text="Genre:" />
+                              <Label fx:id="songDuration" text="Duration:" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="12.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Slider blockIncrement="0.1" />
+                  <HBox prefHeight="20.0" prefWidth="250.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <ImageView fx:id="prevIcon" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#previous" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                           <image>
+                              <Image url="@../../images/Logos/icons/mini_next.png" />
+                           </image>
+                        </ImageView>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <ImageView fx:id="playIcon" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#togglePlayer" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/Logos/icons/mini_play.png" />
+                           </image>
+                        </ImageView>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </HBox>
+                        <ImageView fx:id="nextIcon" fitHeight="20.0" fitWidth="20.0" layoutX="116.0" layoutY="18.0" onMouseClicked="#next" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/Logos/icons/mini_next.png" />
+                           </image>
+                        </ImageView>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                     </children>
+                     <padding>
+                        <Insets top="8.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <VBox prefHeight="70.0" prefWidth="702.0" stylesheets="@Home_Style.css" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: #720D5D;">
+               <children>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/Logos/nota%20blanco_Mesa%20de%20trabajo%201.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="20.0" top="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Label text="Storify" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="24.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="8.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox prefHeight="40.0" prefWidth="111.0" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="searchBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="257.0" promptText="Search" style="-fx-background-radius: 20;">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </TextField>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" onMouseClicked="#search" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/Logos/icons/search_1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="7.5" top="7.5" />
+                           </HBox.margin>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <HBox fx:id="homeBox" onMouseClicked="#select" prefHeight="30.0" prefWidth="234.0" styleClass="tab" stylesheets="@Home_Style.css">
+                     <children>
+                        <ImageView fx:id="homeIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/Logos/icons/calendar_minus.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="9.0" top="1.5" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Home" textFill="#363636">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="artistBox" onMouseClicked="#select" prefHeight="30.0" prefWidth="234.0" styleClass="tab" stylesheets="@Home_Style.css">
+                     <children>
+                        <ImageView fx:id="artistIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/Logos/icons/calendar_minus.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="9.0" top="1.5" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Artists" textFill="#363636">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="favBox" onMouseClicked="#select" prefHeight="30.0" prefWidth="234.0" styleClass="tab" stylesheets="@Home_Style.css">
+                     <children>
+                        <ImageView fx:id="favIcon" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/Logos/icons/calendar_minus.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="9.0" top="1.5" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Favorites" textFill="#363636">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <ImageView fx:id="pn1" fitHeight="49.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Logos/icons/accept_1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pn2" fitHeight="70.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Logos/icons/align_1.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pn3" fitHeight="70.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Logos/icons/arrow_back_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
